@@ -19,33 +19,101 @@ No Effect:
 Ghost
 
 Type: Electric
+Strong Against:
+Flying
+Water
+Neutral Against:
+Normal
+Fighting
+Poison
+Rock
+Bug
+Ghost
+Fire
+Psychic
+Ice
+Weak Against:
+Grass
+Electric
+Dragon
+No Effect:
+Ground
 
 Type: Fire
-Strong Against
-Neutral Against
-Weak Against
-No Effect
+Strong Against:
+Bug
+Grass
+Ice
+Neutral Against:
+Normal
+Fighting
+Flying
+Poison
+Ground
+Ghost
+Electric
+Psychic
+Weak Against:
+Rock
+Fire
+Water
+Dragon
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Water
-Strong Against
-Neutral Against
-Weak Against
-No Effect
+Strong Against:
+Ground
+Rock
+Fire
+Neutral Against:
+Normal
+Fighting
+Flying
+Poison
+Bug
+Ghost
+Electric
+Psychic
+Ice
+Weak Against:
+Water
+Grass
+Dragon
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Grass
-Strong Against
-Neutral Against
-Weak Against
-No Effect
+Strong Against:
+Ground
+Rock
+Water
+Neutral Against:
+Normal
+Fighting
+Ghost
+Electric
+Psychic
+Ice
+Weak Against:
+Flying
+Poison
+Bug
+Fire
+Grass
+Dragon
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Ice
-Strong Against
-Neutral Against
-Weak Against
-No Effect
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Fighting
-Strong Against
+Strong Against:
 Neutral Against
 Weak Against
 No Effect
@@ -54,46 +122,55 @@ Type: Poison
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Ground
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Flying
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Psychic
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Bug
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Rock
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
 
 Type: Ghost
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+Normal
+Psychic
 
 Type: Dragon
 Strong Against
 Neutral Against
 Weak Against
-No Effect
+No Effect:
+This pokemon does not have any type it has no effect against!
