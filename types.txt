@@ -1,0 +1,99 @@
+Type: Normal
+Strong Against:
+This pokemon does not have any type it is strong against!
+Neutral Against:
+Fighting
+Flying
+Ground
+Bug
+Fire
+Water
+Grass
+Electric
+Psychic
+Ice
+Dragon
+Weak Against:
+Rock
+No Effect:
+Ghost
+
+Type: Electric
+
+Type: Fire
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Water
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Grass
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Ice
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Fighting
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Poison
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Ground
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Flying
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Psychic
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Bug
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Rock
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Ghost
+Strong Against
+Neutral Against
+Weak Against
+No Effect
+
+Type: Dragon
+Strong Against
+Neutral Against
+Weak Against
+No Effect
