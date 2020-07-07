@@ -1,0 +1,89 @@
+Type: Normal
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Fight
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Flying
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Poison
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Ground
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Rock
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Bug
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Ghost
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Fire
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Water
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Grass
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Electric
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Psychic
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Ice
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
+
+Type: Dragon
+Strong Against:
+Neutral Against:
+Weak Against:
+No Effect:
