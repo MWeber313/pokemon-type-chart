@@ -1,7 +1,7 @@
 Type: Normal
-Strong Against:
-This pokemon does not have a type it is strong against! 
-Neutral Against:
+Strong Against It:
+Fighting
+Neutral Against It:
 Normal
 Flying
 Poison
@@ -15,91 +15,153 @@ Electric
 Psychic
 Ice
 Dragon
-Weak Against:
-Fighting 
-No Effect:
+Weak Against It:
+This pokemon does not have a type that is weak against it!
+No Effect Against It:
 Ghost
 
 Type: Fighting
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Flying
+Psychic
+Neutral Against It:
+Normal
+Fighting
+Poison
+Ground
+Ghost
+Fire
+Water
+Grass
+Electric
+Ice
+Dragon
+Weak Against It:
+Rock
+Bug
+No Effect Against It:
+This pokemon does not have a type that has no effect against it!
 
 Type: Flying
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Rock
+Electric
+Ice
+Neutral Against It:
+Normal
+Flying
+Poison
+Ghost
+Fire
+Water
+Psychic
+Dragon
+Weak Against It:
+Fighting
+Bug
+Grass
+No Effect Against It:
+Ground
 
 Type: Poison
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Ground
+Bug
+Psychic
+Neutral Against It:
+Normal
+Flying
+Rock
+Ghost
+Fire
+Water
+Electric
+Ice
+Dragon
+Weak Against It:
+Fighting
+Poison
+Grass
+No Effect Against It:
+This pokemon has no type that has no effect against it!
 
 Type: Ground
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Water
+Grass
+Ice
+Neutral Against It:
+Normal
+Fighting
+Flying
+Ground
+Bug
+Ghost
+Fire
+Psychic
+Dragon
+Weak Against It:
+Poison
+Rock
+No Effect Against It:
+Electric
 
 Type: Rock
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Bug
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Ghost
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Fire
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Water
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Grass
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Electric
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Psychic
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Ice
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
 
 Type: Dragon
-Strong Against:
-Neutral Against:
-Weak Against:
-No Effect:
+Strong Against It:
+Neutral Against It:
+Weak Against It:
+No Effect Against It:
