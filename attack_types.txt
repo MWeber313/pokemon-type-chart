@@ -214,16 +214,46 @@ No Effect:
 This pokemon does not have any type it has no effect against!
 
 Type: Psychic
-Strong Against
-Neutral Against
-Weak Against
+Strong Against:
+Fighting
+Poison
+Neutral Against:
+Normal
+Flying
+Ground
+Rock
+Bug
+Ghost
+Fire
+Water
+Grass
+Electric
+Ice
+Dragon
+Weak Against:
+Psychic
 No Effect:
 This pokemon does not have any type it has no effect against!
 
 Type: Bug
-Strong Against
-Neutral Against
-Weak Against
+Strong Against:
+Poison
+Grass
+Psychic
+Neutral Against:
+Normal
+Ground
+Rock
+Bug
+Water
+Electric
+Ice
+Dragon
+Weak Against:
+Fighting
+Flying
+Ghost
+Fire
 No Effect:
 This pokemon does not have any type it has no effect against!
 
