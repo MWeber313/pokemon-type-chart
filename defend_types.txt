@@ -217,30 +217,109 @@ This pokemon has no type that has no effect against it!
 
 Type: Grass
 Strong Against It:
+Flying
+Poison
+Bug
+Fire
+Ice
 Neutral Against It:
+Normal
+Fighting
+Rock
+Ghost
+Psychic
+Dragon
 Weak Against It:
+Ground
+Water
+Grass
+Electric
 No Effect Against It:
+This pokemon has no type that has no effect against it!
 
 Type: Electric
 Strong Against It:
+Ground
 Neutral Against It:
+Normal
+Fighting
+Poison
+Rock
+Bug
+Ghost
+Fire
+Water
+Grass
+Psychic
+Ice
+Dragon
 Weak Against It:
+Flying
+Electric
 No Effect Against It:
+This pokemon has no type that has no effect against it!
 
 Type: Psychic
 Strong Against It:
+Bug
 Neutral Against It:
+Normal
+Flying
+Poison
+Ground
+Rock
+Fire
+Water
+Grass
+Electric
+Ice
+Dragon
 Weak Against It:
+Fighting
+Psychic
 No Effect Against It:
+Ghost
 
 Type: Ice
 Strong Against It:
+Fighting
+Rock
+Fire
 Neutral Against It:
+Normal
+Flying
+Poison
+Ground
+Bug
+Ghost
+Water
+Grass
+Electric
+Psychic
+Dragon
 Weak Against It:
+Ice
 No Effect Against It:
+This pokemon has no type that has no effect against it!
 
 Type: Dragon
 Strong Against It:
+Ice
+Dragon
 Neutral Against It:
+Normal
+Fighting
+Flying
+Poison
+Ground
+Rock
+Bug
+Ghost
+Psychic
 Weak Against It:
+Fire
+Water
+Grass
+Electric
 No Effect Against It:
+This pokemon has no type that has no effect against it!
