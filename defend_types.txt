@@ -1,10 +1,26 @@
 Type: Normal
 Strong Against:
+This pokemon does not have a type it is strong against! 
 Neutral Against:
+Normal
+Flying
+Poison
+Ground
+Rock
+Bug
+Fire
+Water
+Grass
+Electric
+Psychic
+Ice
+Dragon
 Weak Against:
+Fighting 
 No Effect:
+Ghost
 
-Type: Fight
+Type: Fighting
 Strong Against:
 Neutral Against:
 Weak Against:
