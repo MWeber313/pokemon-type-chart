@@ -1,0 +1,324 @@
+Type: Normal
+Strong Against:
+This pokemon does not have any type it is strong against!
+Neutral Against:
+Fighting
+Flying
+Ground
+Bug
+Fire
+Water
+Grass
+Electric
+Psychic
+Ice
+Dragon
+Weak Against:
+Rock
+No Effect:
+Ghost
+
+Type: Fighting
+Strong Against:
+Normal
+Rock
+Ice
+Neutral Against:
+Fighting
+Ground
+Fire
+Water
+Grass
+Electric
+Dragon
+Weak Against:
+Flying
+Poison
+Bug
+Psychic
+No Effect:
+Ghost
+
+Type: Flying
+Strong Against:
+Fighting
+Bug
+Grass
+Neutral Against
+Normal
+Flying
+Poison
+Ground
+Ghost
+Fire
+Water
+Psychic
+Ice
+Dragon
+Weak Against:
+Rock
+Electric
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Poison
+Strong Against:
+Bug
+Grass
+Neutral Against:
+Normal
+Fighting
+Flying
+Fire
+Water
+Electric
+Psychic
+Ice
+Dragon
+Weak Against:
+Poison
+Ground
+Rock
+Ghost
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Ground
+Strong Against:
+Poison
+Rock
+Fire
+Electric
+Neutral Against:
+Normal
+Fighting
+Ground
+Ghost
+Water
+Psychic
+Ice
+Dragon
+Weak Against:
+Bug
+Grass
+No Effect:
+Flying
+
+Type: Rock
+Strong Against:
+Flying
+Bug
+Fire
+Ice
+Neutral Against:
+Normal
+Poison
+Rock
+Ghost
+Water
+Grass
+Electric
+Psychic
+Dragon
+Weak Against:
+Fighting
+Ground
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Bug
+Strong Against:
+Poison
+Grass
+Psychic
+Neutral Against:
+Normal
+Ground
+Rock
+Bug
+Water
+Electric
+Ice
+Dragon
+Weak Against:
+Fighting
+Flying
+Ghost
+Fire
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Ghost
+Strong Against:
+Ghost
+Neutral Against:
+Fighting
+Flying
+Ground
+Rock
+Bug
+Fire
+Water
+Grass
+Electric
+Ice
+Dragon
+Weak Against:
+This pokemon does not have any type it is weak against!
+No Effect:
+Normal
+Psychic
+
+Type: Fire
+Strong Against:
+Bug
+Grass
+Ice
+Neutral Against:
+Normal
+Fighting
+Flying
+Poison
+Ground
+Ghost
+Electric
+Psychic
+Weak Against:
+Rock
+Fire
+Water
+Dragon
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Water
+Strong Against:
+Ground
+Rock
+Fire
+Neutral Against:
+Normal
+Fighting
+Flying
+Poison
+Bug
+Ghost
+Electric
+Psychic
+Ice
+Weak Against:
+Water
+Grass
+Dragon
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Grass
+Strong Against:
+Ground
+Rock
+Water
+Neutral Against:
+Normal
+Fighting
+Ghost
+Electric
+Psychic
+Ice
+Weak Against:
+Flying
+Poison
+Bug
+Fire
+Grass
+Dragon
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Electric
+Strong Against:
+Flying
+Water
+Neutral Against:
+Normal
+Fighting
+Poison
+Rock
+Bug
+Ghost
+Fire
+Psychic
+Ice
+Weak Against:
+Grass
+Electric
+Dragon
+No Effect:
+Ground
+
+Type: Psychic
+Strong Against:
+Fighting
+Poison
+Neutral Against:
+Normal
+Flying
+Ground
+Rock
+Bug
+Ghost
+Fire
+Water
+Grass
+Electric
+Ice
+Dragon
+Weak Against:
+Psychic
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Ice
+Strong Against:
+Flying
+Ground
+Grass
+Dragon
+Neutral Against:
+Normal
+Fighting
+Poison
+Rock
+Bug
+Ghost
+Fire
+Electric
+Psychic
+Weak Against:
+Water
+Ice
+No Effect:
+This pokemon does not have any type it has no effect against!
+
+Type: Dragon
+Strong Against:
+Dragon
+Neutral Against:
+Normal
+Fighting
+Flying
+Poison
+Ground
+Rock
+Bug
+Ghost
+Fire
+Water
+Grass
+Electric
+Psychic
+Ice
+Weak Against:
+This pokemon does not have any type it is weak against!
+No Effect:
+This pokemon does not have any type it has no effect against!
