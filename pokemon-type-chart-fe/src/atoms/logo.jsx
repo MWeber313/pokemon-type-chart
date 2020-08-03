@@ -1,10 +1,12 @@
 import React from "react"
+import styled from "styled-components"
 import * as pokemonLogo from "../img/pokemon-logo.png"
 
 const Logo = ({ ...props }) => {
+  const { height, padding } = props
   return (
     <>
-      <div className="logoContainer" style={{ height: `${props.height}rem` }}>
+      <LogoContainer height={height} padding={padding}>
         <a href="https://www.freepnglogos.com/images/pokemon-logo-png-1421.html">
           <img
             src={pokemonLogo}
@@ -13,9 +15,17 @@ const Logo = ({ ...props }) => {
             width="auto"
           />
         </a>
-      </div>
+      </LogoContainer>
     </>
   )
 }
+
+const LogoContainer = styled.div.attrs((props) => ({
+  height: props.height,
+  padding: props.padding,
+}))`
+  height: ${(props) => (props.height ? `${props.height}rem` : "100%")};
+  padding: ${(props) => (props.padding ? props.padding : "1rem")};
+`
 
 export default Logo
