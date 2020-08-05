@@ -6,11 +6,12 @@ const Logo = ({ ...props }) => {
   const { height, padding } = props
   return (
     <>
-      <LogoContainer height={height} padding={padding}>
-        <a href="https://www.freepnglogos.com/images/pokemon-logo-png-1421.html">
+      <LogoContainer className="logoWrapper" height={height} padding={padding}>
+        <a href="/">
           <img
             src={pokemonLogo}
             alt="Pokemon Logo Png from freepnglogos.com"
+            url="https://www.freepnglogos.com/images/pokemon-logo-png-1421.html"
             height="100%"
             width="auto"
           />
