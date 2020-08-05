@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import "../App.scss"
+import colors from "../styles/colors"
 
 const Container = ({ ...props }) => {
   const {
@@ -44,7 +44,7 @@ const StyledContainer = styled.div.attrs((props) => ({
   justify-content: center;
   align-items: center;
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "white"};
+    props.backgroundColor ? props.backgroundColor : colors.white};
 `
 
 export default Container

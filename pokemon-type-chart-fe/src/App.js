@@ -3,15 +3,21 @@ import "./App.scss"
 import colors from "./styles/colors"
 import Logo from "./atoms/logo"
 import Container from "./atoms/container"
+// import Text from "./atoms/text"
+import Link from "./atoms/link"
 
 const App = () => {
-  console.log(colors);
+  console.log(colors)
   return (
     <div className="App">
       <Container height={5} backgroundColor={colors.black}>
-        <p>boop</p>
+        <Link href={"/link1"} textColor={colors.greyWhite}>
+          BOOP
+        </Link>
         <Logo height={10} />
-        <p>boop</p>
+        <Link href={"/link2"} textColor={colors.greyWhite}>
+          BOOP
+        </Link>
       </Container>
       <Container height={5}>
         <p>Description: TBD</p>
