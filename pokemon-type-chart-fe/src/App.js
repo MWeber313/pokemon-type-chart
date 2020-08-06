@@ -1,21 +1,25 @@
 import React from "react"
-import { Switch, Route, Link } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 
 import "./App.scss"
 import colors from "./styles/colors"
 import Logo from "./atoms/logo"
 import Container from "./atoms/container"
 // import Text from "./atoms/text"
-// import Link from "./atoms/link"
+import StyledNavLink from "./atoms/navLink"
 
 const App = () => {
   console.log(colors)
   return (
     <div className="App">
       <Container height={5} backgroundColor={colors.black}>
-        <Link to="/">BOOP</Link>
+        <StyledNavLink to={"/"} activeClassName="selected">
+          Boop
+        </StyledNavLink>
         <Logo height={10} />
-        <Link to="/link2">BOOP</Link>
+        <StyledNavLink to={"/link2"} activeClassName="selected">
+          Boop2
+        </StyledNavLink>
       </Container>
       <Container height={5}>
         <p>Description: TBD</p>
