@@ -19,16 +19,16 @@ const StyledLink = styled.a.attrs((props) => ({
 }))`
   color: ${(props) => (props.textColor ? props.textColor : colors.black)};
   text-decoration: none;
-  border-bottom: 2px solid;
-  padding-bottom: 3px;
+  border-bottom: 0.2rem solid;
+  padding-bottom: 0.25rem;
   transition: all 1s ease-in-out;
-  transform: translateZ(0);
 
   &:hover {
-    border-bottom: 4px solid;
-    padding-bottom: 5px;
     transition: all 1s ease-in-out;
-    transform: translateZ(0);
+    transform: scale(1.5);
+  }
+  &:active {
+    border-bottom: ${colors.red} solid 0.3rem;
   }
 `
 
