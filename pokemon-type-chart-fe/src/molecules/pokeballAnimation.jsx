@@ -3,16 +3,33 @@ import styled from "styled-components";
 import FluidImg from "../atoms/fluidImg";
 import Container from "../atoms/container";
 // images
-import * as pokeball from "../img/pokeball.png";
+import pokeTop from "../img/pokeballtop.png";
+import pokeBottom from "../img/pokeballbottom.png";
 
 const PokeballAnimation = () => {
 	return (
 		<>
-			<Container margin={"8rem 0"}>
-				<FluidImg src={pokeball} transform={"scale(3)"} />
-			</Container>
+			<AnimationWrapper>
+				<Container height={20}>
+					<FluidImg src={pokeTop} />
+				</Container>
+				<Container height={20} position={"absolute"}>
+					<FluidImg src={pokeBottom} />
+				</Container>
+			</AnimationWrapper>
 		</>
 	);
 };
+
+const AnimationWrapper = styled.div`
+	position: relative;
+	div:last-child {
+		transition: all 1s;
+		&:hover {
+			top: 150px;
+			transition: all 1s;
+		}
+	}
+`;
 
 export default PokeballAnimation;

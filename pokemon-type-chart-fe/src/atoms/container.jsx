@@ -12,6 +12,9 @@ const Container = ({ ...props }) => {
 		backgroundColor,
 		padding,
 		margin,
+		position,
+		top,
+		left,
 	} = props;
 	return (
 		<>
@@ -25,6 +28,9 @@ const Container = ({ ...props }) => {
 				backgroundColor={backgroundColor}
 				padding={padding}
 				margin={margin}
+				position={position}
+				top={top}
+				left={left}
 			>
 				{props.children}
 			</StyledContainer>
@@ -41,6 +47,8 @@ const StyledContainer = styled.div.attrs((props) => ({
 	backgroundColor: props.backgroundColor,
 	padding: props.padding,
 	margin: props.margin,
+	top: props.top,
+	left: props.left,
 }))`
 	height: ${(props) => (props.height ? `${props.height}rem` : "10rem")};
 	width: ${(props) => (props.width ? `${props.width}vw` : "100vw")};
@@ -54,6 +62,9 @@ const StyledContainer = styled.div.attrs((props) => ({
 		props.backgroundColor ? props.backgroundColor : colors.white};
 	padding: ${(props) => (props.padding ? props.padding : null)};
 	margin: ${(props) => (props.margin ? props.margin : null)};
+	position: ${(props) => (props.position ? props.position : "relative")};
+	top: ${(props) => (props.top ? props.top : 0)};
+	left: ${(props) => (props.left ? props.left : 0)};
 `;
 
 export default Container;

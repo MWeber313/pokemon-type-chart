@@ -6,7 +6,12 @@ const FluidImg = ({ ...props }) => {
 
 	return (
 		<>
-			<StyledImg height={height} src={src} alt={alt} transform={transform} />
+			<StyledImg
+				height={height}
+				src={src}
+				alt={alt}
+				transform={transform}
+			/>
 		</>
 	);
 };
@@ -16,10 +21,12 @@ const StyledImg = styled.img.attrs((props) => ({
 	src: props.src,
 	alt: props.alt,
 	transform: props.transform,
+
 }))`
 	height: ${(props) => (props.height ? props.height : "100%")};
 	width: auto;
 	transform: ${(props) => (props.transform ? props.transform : null)};
+
 `;
 
 export default FluidImg;
