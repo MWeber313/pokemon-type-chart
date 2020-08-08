@@ -13,6 +13,7 @@ const PokeballAnimation = () => {
 				<Container height={20}>
 					<FluidImg src={pokeTop} />
 				</Container>
+                {/* last-child top=150px ? show form : don't show form */}
 				<Container height={20} position={"absolute"}>
 					<FluidImg src={pokeBottom} />
 				</Container>
