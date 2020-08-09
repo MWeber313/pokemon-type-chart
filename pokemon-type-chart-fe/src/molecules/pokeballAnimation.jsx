@@ -11,8 +11,11 @@ const PokeballAnimation = () => {
 	const { register, handleSubmit, watch, errors, getValues } = useForm();
 	const data = getValues();
 	const onSubmit = (data) => console.log(data);
+	const pokeForm = document.getElementById("pokeForm");
 
-	console.log(`Watching form input:` + watch);
+	// console.log(`Watching form input:` + watch);
+	console.log(pokeForm);
+
 	return (
 		<>
 			<AnimationWrapper>
@@ -20,9 +23,9 @@ const PokeballAnimation = () => {
 					<FluidImg src={pokeTop} />
 				</Container>
 				{/* last-child top=150px ? show form (z-index) : don't show form */}
-                {/*  */}
+				{/*  */}
 				<Container margin={"-12vh 0"}>
-					<form onSubmit={handleSubmit(onSubmit)}>
+					<form id="pokeForm" onSubmit={handleSubmit(onSubmit)}>
 						<input
 							name="searchName"
 							defaultValue="Search for Pokemon"
@@ -31,7 +34,13 @@ const PokeballAnimation = () => {
 						<input type="submit" />
 					</form>
 				</Container>
-				<Container height={40} position={"absolute"} top={'0'} left={'0'}>
+				<Container
+					id="pokeballBottom"
+					height={40}
+					position={"absolute"}
+					top={"0"}
+					left={"0"}
+				>
 					<FluidImg src={pokeBottom} />
 				</Container>
 			</AnimationWrapper>
