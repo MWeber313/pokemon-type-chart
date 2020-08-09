@@ -1,20 +1,24 @@
-import React from "react"
-import styled from "styled-components"
-import colors from "../styles/colors"
+import React from "react";
+import styled from "styled-components";
+import colors from "../styles/colors";
 
 const Text = ({ ...props }) => {
-  const { textColor } = props
-  return (
-    <>
-      <StyledText textColor={textColor}>{props.children}</StyledText>
-    </>
-  )
-}
+	const { textColor, fontSize } = props;
+	return (
+		<>
+			<StyledText textColor={textColor} fontSize={fontSize}>
+				{props.children}
+			</StyledText>
+		</>
+	);
+};
 
 const StyledText = styled.p.attrs((props) => ({
-  textColor: props.textColor,
+	textColor: props.textColor,
+	fontSize: props.fontSize,
 }))`
-  color: ${(props) => (props.textColor ? props.textColor : colors.black)};
-`
+	color: ${(props) => (props.textColor ? props.textColor : colors.black)};
+	font-size: ${(props) => (props.fontSize ? props.fontSize : "auto")};
+`;
 
-export default Text
+export default Text;

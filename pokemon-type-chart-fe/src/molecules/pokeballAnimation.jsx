@@ -16,11 +16,12 @@ const PokeballAnimation = () => {
 	return (
 		<>
 			<AnimationWrapper>
-				<Container height={20}>
+				<Container height={40}>
 					<FluidImg src={pokeTop} />
 				</Container>
 				{/* last-child top=150px ? show form (z-index) : don't show form */}
-				<Container margin={"-10rem 0"}>
+                {/*  */}
+				<Container margin={"-12vh 0"}>
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<input
 							name="searchName"
@@ -30,7 +31,7 @@ const PokeballAnimation = () => {
 						<input type="submit" />
 					</form>
 				</Container>
-				<Container height={20} position={"absolute"}>
+				<Container height={40} position={"absolute"} top={'0'} left={'0'}>
 					<FluidImg src={pokeBottom} />
 				</Container>
 			</AnimationWrapper>

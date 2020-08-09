@@ -8,12 +8,14 @@ const Container = ({ ...props }) => {
 		width,
 		display,
 		flexDirection,
+		alignSelf,
 		textAlign,
 		backgroundColor,
 		padding,
 		margin,
 		position,
 		top,
+		bottom,
 		left,
 	} = props;
 	return (
@@ -24,12 +26,14 @@ const Container = ({ ...props }) => {
 				width={width}
 				display={display}
 				flexDirection={flexDirection}
+				alignSelf={alignSelf}
 				textAlign={textAlign}
 				backgroundColor={backgroundColor}
 				padding={padding}
 				margin={margin}
 				position={position}
 				top={top}
+				bottom={bottom}
 				left={left}
 			>
 				{props.children}
@@ -44,18 +48,21 @@ const StyledContainer = styled.div.attrs((props) => ({
 	textAlign: props.textAlign,
 	display: props.display,
 	flexDirection: props.flexDirection,
+	alignSelf: props.alignSelf,
 	backgroundColor: props.backgroundColor,
 	padding: props.padding,
 	margin: props.margin,
 	top: props.top,
+	bottom: props.bottom,
 	left: props.left,
 }))`
-	height: ${(props) => (props.height ? `${props.height}rem` : "10rem")};
+	height: ${(props) => (props.height ? `${props.height}vh` : "auto")};
 	width: ${(props) => (props.width ? `${props.width}vw` : "100vw")};
 	text-align: ${(props) => (props.textAlign ? props.textAlign : "center")};
 	display: flex;
 	flex-direction: ${(props) =>
 		props.flexDirection ? props.flexDirection : "row"};
+	align-self: ${(props) => (props.alignSelf ? props.alignSelf : null)};
 	justify-content: center;
 	align-items: center;
 	background-color: ${(props) =>
@@ -63,8 +70,9 @@ const StyledContainer = styled.div.attrs((props) => ({
 	padding: ${(props) => (props.padding ? props.padding : null)};
 	margin: ${(props) => (props.margin ? props.margin : null)};
 	position: ${(props) => (props.position ? props.position : "relative")};
-	top: ${(props) => (props.top ? props.top : 0)};
-	left: ${(props) => (props.left ? props.left : 0)};
+	top: ${(props) => (props.top ? props.top : "auto")};
+	bottom: ${(props) => (props.bottom ? props.bottom : "auto")};
+	left: ${(props) => (props.left ? props.left : "auto")};
 `;
 
 export default Container;
