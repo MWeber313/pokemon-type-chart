@@ -10,12 +10,9 @@ import PokeballAnimation from "./molecules/pokeballAnimation";
 import Text from "./atoms/text";
 
 const App = () => {
-	// console.log(colors);
-	// const pokeForm = document.getElementById("pokeForm");
 	const today = new Date();
 	const year = today.getFullYear();
 
-	// console.log(pokeForm);
 
 	return (
 		<div className="App">

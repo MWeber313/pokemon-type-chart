@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import FluidImg from "../atoms/fluidImg";
@@ -9,16 +9,16 @@ import pokeBottom from "../img/pokeballbottom.png";
 
 const PokeballAnimation = () => {
 	const { register, handleSubmit, watch, errors, getValues } = useForm();
-	const data = getValues();
-	const onSubmit = (data) => console.log(data);
-	const pokeForm = document.getElementById("pokeForm");
-
-	// console.log(`Watching form input:` + watch);
-	console.log(pokeForm);
-
+	const onSubmit = () => console.log(getValues());
+	const [isBallOpen, setIsBallOpen] = useState(false);
+	console.log(`Watching form input:` + watch);
+	console.log(isBallOpen);
 	return (
 		<>
-			<AnimationWrapper>
+			<AnimationWrapper
+				isBallOpen={isBallOpen}
+				onToggleBall={() => setIsBallOpen(!isBallOpen)}
+			>
 				<Container height={40}>
 					<FluidImg src={pokeTop} />
 				</Container>
@@ -50,12 +50,12 @@ const PokeballAnimation = () => {
 
 const AnimationWrapper = styled.div`
 	position: relative;
-	div:last-child {
+	/* div:last-child {
 		transition: all 1s;
 		&:hover {
 			top: 150px;
 			transition: all 1s;
-		}
+		} */
 	}
 `;
 
