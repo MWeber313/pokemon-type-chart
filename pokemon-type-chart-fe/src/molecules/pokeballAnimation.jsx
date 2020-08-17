@@ -16,14 +16,16 @@ const PokeballAnimation = () => {
 	useEffect(() => {
 		// change ball
 		console.log(`isBallOpen: ${isBallOpen}`);
+		// TODO: need to stop refresh unless ball clicked
 	});
 
 	const ShowForm = ({ isBallOpen }) => {
 		const props = useSpring({
-			opacity: isBallOpen ? 1 : 0,
-			from: { opacity: 0 },
-			zIndex: isBallOpen ? 999 : 0,
+			display: isBallOpen ? "inline" : "none",
+			from: { display: "none" },
+			zIndex: 999,
 		});
+		console.log(errors, watch);
 		return (
 			<animated.div style={props}>
 				<form id="pokeForm" onSubmit={handleSubmit(onSubmit)}>
@@ -38,28 +40,34 @@ const PokeballAnimation = () => {
 		);
 	};
 
-	//   console.log(`Watching form input:` + watch)
+	const OpenBall = ({ isBallOpen }) => {
+		const props = useSpring({
+			display: isBallOpen ? "inline" : "none",
+			from: { display: "none" },
+			zIndex: 999,
+		});
+		return (
+			<animated.div style={props}>
+				<Container id="pokeballBottom" height={16.5}>
+					<FluidImg src={pokeBottom} />
+				</Container>
+			</animated.div>
+		);
+	};
+
 	return (
 		<>
-			<ShowForm isBallOpen={isBallOpen} />
 			<AnimationWrapper
 				className={"animationWrapper"}
 				isBallOpen={isBallOpen}
 				onClick={() => setIsBallOpen(!isBallOpen)}
 			>
-				<Container height={40}>
+				<Container height={20}>
 					<FluidImg src={pokeTop} />
 				</Container>
-				<Container
-					id="pokeballBottom"
-					height={40}
-					position={"absolute"}
-					top={"23vh"}
-					left={"0"}
-				>
-					<FluidImg src={pokeBottom} />
-				</Container>
 			</AnimationWrapper>
+			<ShowForm isBallOpen={isBallOpen} />
+			<OpenBall isBallOpen={isBallOpen} />
 		</>
 	);
 };

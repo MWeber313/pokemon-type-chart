@@ -13,9 +13,8 @@ const App = () => {
 	const today = new Date();
 	const year = today.getFullYear();
 
-
 	return (
-		<div className="App">
+		<div className="App" >
 			<Container height={10} backgroundColor={colors.black}>
 				<StyledNavLink to={"/"} activeClassName="selected">
 					Boop
