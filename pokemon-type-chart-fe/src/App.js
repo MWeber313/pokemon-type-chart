@@ -9,6 +9,13 @@ import StyledNavLink from "./atoms/navLink";
 import PokeballAnimation from "./molecules/pokeballAnimation";
 import Text from "./atoms/text";
 
+
+// TODO:
+// onSubmit, hide form and init loading
+// on query return:
+// four panels:
+// top with pokemon info
+// bottom three with strong/neutral/weak
 const App = () => {
 	const today = new Date();
 	const year = today.getFullYear();
