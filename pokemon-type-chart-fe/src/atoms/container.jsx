@@ -58,8 +58,8 @@ const StyledContainer = styled.div.attrs((props) => ({
   left: props.left,
   zIndex: props.zIndex,
 }))`
-  height: ${(props) => (props.height ? `${props.height}vh` : "auto")};
-  width: ${(props) => (props.width ? `${props.width}vw` : "100vw")};
+  height: ${(props) => (props.height ? `${props.height}rem` : "auto")};
+  width: ${(props) => (props.width ? `${props.width}rem` : "100vw")};
   text-align: ${(props) => (props.textAlign ? props.textAlign : "center")};
   display: flex;
   flex-direction: ${(props) =>

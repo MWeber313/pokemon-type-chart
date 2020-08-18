@@ -19,31 +19,31 @@ const PokeballAnimation = () => {
 
 	const ShowForm = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-1000px" : "-225px",
-			from: { marginTop: "-1000px" },
+			marginTop: !isBallOpen ? "-20rem" : "-15.5rem",
+			from: { marginTop: "-20rem" },
 			display: "flex",
-      justifyContent: "space-around",
-      overflowY: "hidden"
+			justifyContent: "space-around",
+			overflowY: "hidden",
 		});
 		return (
 			<animated.div style={props}>
-        <SearchForm />
+				<SearchForm />
 			</animated.div>
 		);
 	};
 
 	const OpenBall = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-41px" : "100px",
-			from: { marginTop: "0px" },
+			marginTop: !isBallOpen ? "-4rem" : "4rem",
+			from: { marginTop: "-4rem" },
 			// zIndex: 999,
 		});
 		return (
-			<animated.div style={props}>
-				<Container id="pokeballBottom" height={16.5}>
-					<FluidImg src={pokeBottom} />
-				</Container>
-			</animated.div>
+			<Container id="pokeballBottom">
+				<animated.div style={props}>
+					<FluidImg src={pokeBottom} height={"11.5rem"} />
+				</animated.div>
+			</Container>
 		);
 	};
 
@@ -54,8 +54,8 @@ const PokeballAnimation = () => {
 				isBallOpen={isBallOpen}
 				onClick={() => setIsBallOpen(!isBallOpen)}
 			>
-				<Container height={20}>
-					<FluidImg src={pokeTop} />
+				<Container>
+					<FluidImg src={pokeTop} height={"14rem"} />
 				</Container>
 			</AnimationWrapper>
 			<OpenBall isBallOpen={isBallOpen} />

@@ -31,7 +31,7 @@ const App = () => {
 					Boop2
 				</StyledNavLink>
 			</Container>
-			<Container height={10}>
+			<Container height={5}>
 				<p>Description: TBD</p>
 			</Container>
 			<PokeballAnimation />
