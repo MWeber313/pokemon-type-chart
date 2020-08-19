@@ -22,16 +22,16 @@ const App = () => {
 
 	return (
 		<div className="App" >
-			<Container height={10} backgroundColor={colors.black}>
+			<Container height={6} backgroundColor={colors.black}>
 				<StyledNavLink to={"/"} activeClassName="selected">
 					Boop
 				</StyledNavLink>
-				<Logo height={10} />
+				<Logo height={7} />
 				<StyledNavLink to={"/link2"} activeClassName="selected">
 					Boop2
 				</StyledNavLink>
 			</Container>
-			<Container height={5}>
+			<Container height={2}>
 				<p>Description: TBD</p>
 			</Container>
 			<PokeballAnimation />
