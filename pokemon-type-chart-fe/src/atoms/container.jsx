@@ -5,6 +5,7 @@ import colors from "../styles/colors"
 const Container = ({ ...props }) => {
   const {
     height,
+    minHeight,
     width,
     display,
     flexDirection,
@@ -24,6 +25,7 @@ const Container = ({ ...props }) => {
       <StyledContainer
         className="container"
         height={height}
+        minHeight={minHeight}
         width={width}
         display={display}
         flexDirection={flexDirection}
@@ -45,6 +47,7 @@ const Container = ({ ...props }) => {
 
 const StyledContainer = styled.div.attrs((props) => ({
   height: props.height,
+  minHeight: props.minHeight,
   width: props.width,
   textAlign: props.textAlign,
   display: props.display,
@@ -59,6 +62,7 @@ const StyledContainer = styled.div.attrs((props) => ({
   zIndex: props.zIndex,
 }))`
   height: ${(props) => (props.height ? `${props.height}rem` : "auto")};
+  min-height: ${(props) => (props.minHeight? props.minHeight: "fit-content(100%)")};
   width: ${(props) => (props.width ? `${props.width}rem` : "100vw")};
   text-align: ${(props) => (props.textAlign ? props.textAlign : "center")};
   display: flex;

@@ -21,7 +21,7 @@ const App = () => {
 	const year = today.getFullYear();
 
 	return (
-		<div className="App" >
+		<div className="App" style={{position:"relative", minHeight: "100vh"}}>
 			<Container height={6} backgroundColor={colors.black}>
 				<StyledNavLink to={"/"} activeClassName="selected">
 					Boop
@@ -36,6 +36,7 @@ const App = () => {
 			</Container>
 			<PokeballAnimation />
 			<Container
+			// TODO: mobile && keyboard open ? no footer : footer
 				id="footer"
 				backgroundColor={colors.black}
 				position={"absolute"}
