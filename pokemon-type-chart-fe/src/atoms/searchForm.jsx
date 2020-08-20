@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
+
 const defaultValues = {
 	Search: "",
 };
@@ -12,16 +13,15 @@ const SearchForm = () => {
 	// let renderCount = 0;
 	// renderCount++;
 	// console.log(`Render Count: ${renderCount} Data: ${JSON.stringify(data)}`);
+	console.log(data === null ? `Waiting for input` : data);
 
-	const dataAlert = () => alert(data);
 	return (
 		<>
 			<form
-				style={{ display: "flex", flexDirection: "column" }}
+				style={{ display: "flex", flexDirection: "column", zIndex: "inherit" }}
 				onSubmit={handleSubmit((data) => {
 					setData(data);
 					alert(JSON.stringify(data));
-					// console.log(data);
 				})}
 			>
 				<label value="Search Pokedex">Search Pokedex</label>

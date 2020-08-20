@@ -13,17 +13,18 @@ const PokeballAnimation = () => {
 
 	useEffect(() => {
 		// change ball
-		console.log(`isBallOpen: ${isBallOpen}`);
+		// console.log(`isBallOpen: ${isBallOpen}`);
 		// TODO: need to stop refresh unless ball clicked
 	});
 
 	const ShowForm = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-200rem" : "-13rem",
+			marginTop: !isBallOpen ? "-200rem" : "-16rem",
 			from: { marginTop: "-200rem" },
 			display: "flex",
 			justifyContent: "space-around",
 			overflow: "hidden",
+			zIndex: isBallOpen ? 999 : 0,
 		});
 		return (
 			<animated.div style={props}>
@@ -34,9 +35,9 @@ const PokeballAnimation = () => {
 
 	const OpenBall = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-2.75rem" : "4.75rem",
-			from: { marginTop: "-2.75rem" },
-			// zIndex: 999,
+			marginTop: !isBallOpen ? "-0.75rem" : "10rem",
+			from: { marginTop: "-0.75rem" },
+			zIndex: isBallOpen ? 99 : 0,
 		});
 		return (
 			<Container id="pokeballBottom">
@@ -64,5 +65,8 @@ const PokeballAnimation = () => {
 	);
 };
 
-const AnimationWrapper = styled.div``;
+const AnimationWrapper = styled.div`
+	max-height: 8rem;
+	overflow: visible;
+`;
 export default PokeballAnimation;
