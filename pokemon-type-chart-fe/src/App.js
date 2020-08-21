@@ -8,7 +8,7 @@ import Container from "./atoms/container";
 import StyledNavLink from "./atoms/navLink";
 import PokeballAnimation from "./molecules/pokeballAnimation";
 import Text from "./atoms/text";
-
+import Results from "./Results";
 
 // TODO:
 // onSubmit, hide form and init loading
@@ -21,25 +21,25 @@ const App = () => {
 	const year = today.getFullYear();
 
 	return (
-		<div className="App" style={{position:"relative", minHeight: "100vh"}}>
-			<Container height={6} backgroundColor={colors.black}>
+		<div className="App" style={{ position: "relative", minHeight: "100vh" }}>
+			<Container height={4} backgroundColor={colors.black}>
 				<StyledNavLink to={"/"} activeClassName="selected">
-					Boop
+					Search
 				</StyledNavLink>
-				<Logo height={7} />
+				<Logo height={8} />
 				<StyledNavLink to={"/link2"} activeClassName="selected">
-					Boop2
+					About
 				</StyledNavLink>
 			</Container>
-			<Container height={2}>
+			{/* <Container height={2}>
 				<p>Description: TBD</p>
-			</Container>
-			<PokeballAnimation />
+			</Container> */}
+			{/* <PokeballAnimation /> */}
+			<Results />
 			<Container
-			// TODO: mobile && keyboard open ? no footer : footer
 				id="footer"
 				backgroundColor={colors.black}
-				position={"absolute"}
+				position={"sticky"}
 				bottom={"0"}
 				flexDirection={"column"}
 			>
@@ -50,7 +50,7 @@ const App = () => {
 			</Container>
 			{/* Routing */}
 			<Switch>
-				<Route path="/link2" />
+				<Route path="/about" />
 				<Route path="/" />
 			</Switch>
 		</div>
