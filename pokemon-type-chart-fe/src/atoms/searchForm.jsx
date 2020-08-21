@@ -8,19 +8,19 @@ const defaultValues = {
 
 const SearchForm = () => {
 	const { handleSubmit, register } = useForm({ defaultValues });
-	const [data, setData] = useState(null);
+	const [searchInput, setSearchInput] = useState(null);
 
 	// let renderCount = 0;
 	// renderCount++;
 	// console.log(`Render Count: ${renderCount} Data: ${JSON.stringify(data)}`);
-	console.log(data === null ? `Waiting for input` : data);
+	console.log(searchInput === null ? `Waiting for input` : searchInput);
 
 	return (
 		<>
 			<form
 				style={{ display: "flex", flexDirection: "column", zIndex: "inherit" }}
 				onSubmit={handleSubmit((data) => {
-					setData(data);
+					setSearchInput(searchInput);
 					alert(JSON.stringify(data));
 				})}
 			>

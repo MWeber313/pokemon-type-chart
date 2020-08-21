@@ -31,17 +31,16 @@ const App = () => {
 					About
 				</StyledNavLink>
 			</Container>
-			{/* <Container height={2}>
-				<p>Description: TBD</p>
-			</Container> */}
-			{/* <PokeballAnimation /> */}
-			<Results />
+
+			<PokeballAnimation />
+			{/* <Results /> */}
 			<Container
 				id="footer"
 				backgroundColor={colors.black}
-				position={"sticky"}
+				position={"absolute"}
 				bottom={"0"}
 				flexDirection={"column"}
+				padding={"0.25rem"}
 			>
 				<Text textColor={colors.greyWhite}>Pokemon Type Chart, Mack Weber</Text>
 				<Text textColor={colors.greyWhite} fontSize={"0.8rem"}>

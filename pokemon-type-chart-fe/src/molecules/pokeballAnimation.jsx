@@ -68,5 +68,6 @@ const PokeballAnimation = () => {
 const AnimationWrapper = styled.div`
 	max-height: 8rem;
 	overflow: visible;
+	margin-top: 1rem;
 `;
 export default PokeballAnimation;
