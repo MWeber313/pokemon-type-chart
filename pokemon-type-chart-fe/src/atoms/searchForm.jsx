@@ -10,9 +10,7 @@ const SearchForm = () => {
 	const { handleSubmit, register } = useForm({ defaultValues });
 	const [searchInput, setSearchInput] = useState(null);
 
-	// let renderCount = 0;
-	// renderCount++;
-	// console.log(`Render Count: ${renderCount} Data: ${JSON.stringify(data)}`);
+
 	console.log(searchInput === null ? `Waiting for input` : searchInput);
 
 	return (
