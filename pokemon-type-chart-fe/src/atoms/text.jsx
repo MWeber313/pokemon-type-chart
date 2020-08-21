@@ -6,7 +6,7 @@ const Text = ({ ...props }) => {
 	const { textColor, fontSize, margin, padding } = props;
 	return (
 		<>
-			<StyledText textColor={textColor} fontSize={fontSize}>
+			<StyledText textColor={textColor} fontSize={fontSize} margin={margin} padding={padding}>
 				{props.children}
 			</StyledText>
 		</>

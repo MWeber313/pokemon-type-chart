@@ -9,6 +9,7 @@ import StyledNavLink from "./atoms/navLink";
 import PokeballAnimation from "./molecules/pokeballAnimation";
 import Text from "./atoms/text";
 import Results from "./Results";
+import Theme from "./styles/Theme";
 
 // TODO:
 // onSubmit, hide form and init loading
@@ -21,38 +22,42 @@ const App = () => {
 	const year = today.getFullYear();
 
 	return (
-		<div className="App" style={{ position: "relative", minHeight: "100vh" }}>
-			<Container height={4} backgroundColor={colors.black}>
-				<StyledNavLink to={"/"} activeClassName="selected">
-					Search
-				</StyledNavLink>
-				<Logo height={8} />
-				<StyledNavLink to={"/link2"} activeClassName="selected">
-					About
-				</StyledNavLink>
-			</Container>
+		<Theme>
+			<div className="App" style={{ position: "relative", minHeight: "100vh" }}>
+				<Container height={4} backgroundColor={colors.black}>
+					<StyledNavLink to={"/"} activeClassName="selected">
+						Search
+					</StyledNavLink>
+					<Logo height={8} />
+					<StyledNavLink to={"/link2"} activeClassName="selected">
+						About
+					</StyledNavLink>
+				</Container>
 
-			<PokeballAnimation />
-			{/* <Results /> */}
-			<Container
-				id="footer"
-				backgroundColor={colors.black}
-				position={"absolute"}
-				bottom={"0"}
-				flexDirection={"column"}
-				padding={"0.25rem"}
-			>
-				<Text textColor={colors.greyWhite}>Pokemon Type Chart, Mack Weber</Text>
-				<Text textColor={colors.greyWhite} fontSize={"0.8rem"}>
-					All Rights Reserved, {year}
-				</Text>
-			</Container>
-			{/* Routing */}
-			<Switch>
-				<Route path="/about" />
-				<Route path="/" />
-			</Switch>
-		</div>
+				<PokeballAnimation />
+				<Results />
+				<Container
+					id="footer"
+					backgroundColor={colors.black}
+					position={"absolute"}
+					bottom={"0"}
+					flexDirection={"column"}
+					padding={"0.25rem"}
+				>
+					<Text textColor={colors.greyWhite}>
+						Pokemon Type Chart, Mack Weber
+					</Text>
+					<Text textColor={colors.greyWhite} fontSize={"0.8rem"}>
+						All Rights Reserved, {year}
+					</Text>
+				</Container>
+				{/* Routing */}
+				<Switch>
+					<Route path="/about" />
+					<Route path="/" />
+				</Switch>
+			</div>
+		</Theme>
 	);
 };
 
