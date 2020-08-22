@@ -21,6 +21,7 @@ const Container = styled.div`
 	margin: ${(props) => props.margin || "auto"};
 	position: ${(props) => (props.absolute ? "absolute" : "relative")};
 	bottom: ${(props) => (props.bottom ? 0 : "auto")};
+	top: ${(props) => (props.top ? 0 : "auto")};
 	overflow: ${(props) => (props.hidden ? "hidden" : "auto")};
 `;
 

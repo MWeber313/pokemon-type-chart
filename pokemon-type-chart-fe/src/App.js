@@ -3,14 +3,12 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 import Theme from "./styles/Theme";
-import { Container, Logo, CustomNavLink, Text } from "./atoms";
+import { Container, Text } from "./atoms";
+import { Header } from "./molecules";
 
 // TODO:
 // onSubmit, hide form and init loading
-// on query return:
-// four panels:
-// top with pokemon info
-// bottom three with strong/neutral/weak
+
 const App = () => {
 	const today = new Date();
 	const year = today.getFullYear();
@@ -18,15 +16,7 @@ const App = () => {
 	return (
 		<Theme>
 			<Container className="App" minHeight={"100vh"} width={"100vw"}>
-				<Container dark>
-					<CustomNavLink to={"/"} activeClassName="selected">
-						Search
-					</CustomNavLink>
-					<Logo height={"8rem"} />
-					<CustomNavLink to={"/link2"} activeClassName="selected">
-						About
-					</CustomNavLink>
-				</Container>
+				<Header />
 
 				{/* <PokeballAnimation />
 				<Results /> */}
