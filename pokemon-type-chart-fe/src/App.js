@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 import Theme from "./styles/Theme";
-import { Container, Logo, StyledNavLink, Text } from "./atoms";
+import { Container, Logo, CustomNavLink, Text } from "./atoms";
 
 // TODO:
 // onSubmit, hide form and init loading
@@ -17,15 +17,15 @@ const App = () => {
 
 	return (
 		<Theme>
-			<Container className="App" minHeight={"100vh"}>
+			<Container className="App" minHeight={"100vh"} width={"100vw"}>
 				<Container dark>
-					<StyledNavLink to={"/"} activeClassName="selected">
+					<CustomNavLink to={"/"} activeClassName="selected">
 						Search
-					</StyledNavLink>
+					</CustomNavLink>
 					<Logo height={8} />
-					<StyledNavLink to={"/link2"} activeClassName="selected">
+					<CustomNavLink to={"/link2"} activeClassName="selected">
 						About
-					</StyledNavLink>
+					</CustomNavLink>
 				</Container>
 
 				{/* <PokeballAnimation />
