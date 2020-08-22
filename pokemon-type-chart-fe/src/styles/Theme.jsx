@@ -13,8 +13,18 @@ const theme = {
 		gray: "#747474",
 	},
 
+	font: {
+		sm: "0.8rem",
+		med: "1.2rem",
+		lg: "1.6rem"
+	},
+
+	small: "0.5rem",
+	medium: "1rem",
+	large: "1.5rem",
 	dark: colors.black,
-	light: colors.greyWhite
+	light: colors.greyWhite,
+	cta: colors.red
 	// TODO: fonts, fontSizes
 };
 

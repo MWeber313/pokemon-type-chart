@@ -1,26 +1,20 @@
-import React from "react";
 import styled from "styled-components";
-import colors from "../styles/colors";
 
-const Text = ({ ...props }) => {
-	const { textColor, fontSize, margin, padding } = props;
-	return (
-		<>
-			<StyledText textColor={textColor} fontSize={fontSize} margin={margin} padding={padding}>
-				{props.children}
-			</StyledText>
-		</>
-	);
-};
-
-const StyledText = styled.p.attrs((props) => ({
-	textColor: props.textColor,
-	fontSize: props.fontSize,
-	margin: props.margin,
-	padding: props.padding,
-}))`
-	color: ${(props) => (props.textColor ? props.textColor : colors.black)};
-	font-size: ${(props) => (props.fontSize ? props.fontSize : "auto")};
+const Text = styled.p`
+	color: ${(props) =>
+		props.dark
+			? props.theme.dark
+			: props.cta
+			? props.theme.cta
+			: props.theme.light};
+	font-size: ${(props) =>
+		props.sm
+			? props.theme.font.sm
+			: props.med
+			? props.theme.font.med
+			: props.lg
+			? props.theme.font.lg
+			: "inherit"};
 	margin: ${(props) => (props.margin ? props.margin : "auto")};
 	padding: ${(props) => (props.padding ? props.padding : "auto")};
 `;

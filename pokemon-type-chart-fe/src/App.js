@@ -2,14 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import "./App.scss";
-import colors from "./styles/colors";
-import Logo from "./atoms/logo";
-import StyledNavLink from "./atoms/navLink";
-// import PokeballAnimation from "./molecules/pokeballAnimation";
-import Text from "./atoms/text";
-// import Results from "./Results";
 import Theme from "./styles/Theme";
-import { Container } from "./atoms";
+import { Container, Logo, StyledNavLink, Text } from "./atoms";
 
 // TODO:
 // onSubmit, hide form and init loading
@@ -36,19 +30,9 @@ const App = () => {
 
 				{/* <PokeballAnimation />
 				<Results /> */}
-				<Container
-					dark
-					position={"absolute"}
-					bottom={"0"}
-					flexDirection={"column"}
-					padding={"0.25rem"}
-				>
-					<Text textColor={colors.greyWhite}>
-						Pokemon Type Chart, Mack Weber
-					</Text>
-					<Text textColor={colors.greyWhite} fontSize={"0.8rem"}>
-						All Rights Reserved, {year}
-					</Text>
+				<Container dark absolute column bottom small >
+					<Text>Pokemon Type Chart, Mack Weber</Text>
+					<Text sm>All Rights Reserved, {year}</Text>
 				</Container>
 				{/* Routing */}
 				<Switch>

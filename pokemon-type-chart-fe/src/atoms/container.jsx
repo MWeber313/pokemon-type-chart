@@ -10,9 +10,17 @@ const Container = styled.div`
 	flex-direction: ${(props) => (props.column ? "column" : "auto")};
 	justify-content: ${(props) => props.justifyContent || "center"};
 	align-items: ${(props) => props.alignItems || "center"};
-	padding: ${(props) => props.padding || "auto"};
+	padding: ${(props) =>
+		props.large
+			? props.theme.large
+			: props.medium
+			? props.theme.medium
+			: props.small
+			? props.theme.small
+			: "auto"};
 	margin: ${(props) => props.margin || "auto"};
-	position: ${(props) => props.position || "relative"};
+	position: ${(props) => (props.absolute ? "absolute" : "relative")};
+	bottom: ${(props) => (props.bottom ? 0 : "auto")};
 `;
 
 export default Container;
