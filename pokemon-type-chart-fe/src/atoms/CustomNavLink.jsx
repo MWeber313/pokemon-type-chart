@@ -14,7 +14,7 @@ const CustomNavLink = styled(NavLink)`
 		transform: scale(1.5);
 	}
 	&.selected {
-		border-bottom: ${(props) => props.theme.primary} solid 0.3rem;
+		border-bottom: ${(props) => props.theme.cta} solid 0.3rem;
 	}
 `;
 

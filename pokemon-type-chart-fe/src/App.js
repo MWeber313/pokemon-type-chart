@@ -17,9 +17,6 @@ const App = () => {
 		<Theme>
 			<Container className="App" minHeight={"100vh"} width={"100vw"}>
 				<Header />
-
-				{/* <PokeballAnimation />
-				<Results /> */}
 				<Container dark absolute column bottom small>
 					<Text>Pokemon Type Chart, Mack Weber</Text>
 					<Text sm>All Rights Reserved, {year}</Text>
