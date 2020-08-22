@@ -21,12 +21,9 @@ const Logo = ({ ...props }) => {
 	);
 };
 
-const LogoContainer = styled.div.attrs((props) => ({
-	height: props.height,
-	padding: props.padding,
-}))`
-	height: ${(props) => (props.height ? `${props.height}rem` : "100%")};
-	padding: ${(props) => (props.padding ? props.padding : "1rem")};
+const LogoContainer = styled.div`
+	height: ${(props) => props.height || "100%"};
+	padding: ${(props) => props.padding || "1rem"};
 `;
 
 export default Logo;

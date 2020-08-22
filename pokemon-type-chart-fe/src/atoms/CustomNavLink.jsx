@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
-import colors from "../styles/colors";
 
 const CustomNavLink = styled(NavLink)`
 	color: ${(props) => (props.color ? props.color : props.theme.light)};

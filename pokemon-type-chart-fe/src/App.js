@@ -22,7 +22,7 @@ const App = () => {
 					<CustomNavLink to={"/"} activeClassName="selected">
 						Search
 					</CustomNavLink>
-					<Logo height={8} />
+					<Logo height={"8rem"} />
 					<CustomNavLink to={"/link2"} activeClassName="selected">
 						About
 					</CustomNavLink>
@@ -30,7 +30,7 @@ const App = () => {
 
 				{/* <PokeballAnimation />
 				<Results /> */}
-				<Container dark absolute column bottom small >
+				<Container dark absolute column bottom small>
 					<Text>Pokemon Type Chart, Mack Weber</Text>
 					<Text sm>All Rights Reserved, {year}</Text>
 				</Container>
