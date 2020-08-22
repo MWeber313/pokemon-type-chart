@@ -5,7 +5,11 @@ const Container = styled.div`
 	min-height: ${(props) => props.minHeight};
 	width: ${(props) => props.width || "100%"};
 	background-color: ${(props) =>
-		props.dark ? props.theme.dark : props.theme.light};
+		props.dark
+			? props.theme.dark
+			: props.transparent
+			? "transparent"
+			: props.theme.light};
 	display: ${(props) => props.display || "flex"};
 	flex-direction: ${(props) => (props.column ? "column" : "auto")};
 	justify-content: ${(props) => props.justifyContent || "center"};

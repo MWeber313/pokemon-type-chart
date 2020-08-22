@@ -1,3 +1,4 @@
 import Header from "./Header";
+import PokeBallAnimation from "./PokeballAnimation"
 
-export { Header };
+export { Header, PokeBallAnimation };

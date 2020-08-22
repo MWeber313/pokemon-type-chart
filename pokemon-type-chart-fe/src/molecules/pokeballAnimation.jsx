@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
-import FluidImg from "../atoms/fluidImg";
-import Container from "../atoms/oldcontainer";
+import { FluidImage, Container, SearchForm } from "../atoms";
 // images
 import pokeTop from "../img/pokeballtop.png";
 import pokeBottom from "../img/pokeballbottom.png";
-import SearchForm from "../atoms/searchForm";
 
 const PokeballAnimation = () => {
 	const [isBallOpen, setIsBallOpen] = useState(false);
@@ -40,9 +38,9 @@ const PokeballAnimation = () => {
 			zIndex: isBallOpen ? 99 : 0,
 		});
 		return (
-			<Container id="pokeballBottom">
+			<Container id="pokeballBottom" transparent>
 				<animated.div style={props}>
-					<FluidImg src={pokeBottom} height={"8.25rem"} />
+					<FluidImage src={pokeBottom} height={"8.25rem"} />
 				</animated.div>
 			</Container>
 		);
@@ -54,10 +52,9 @@ const PokeballAnimation = () => {
 				className={"animationWrapper"}
 				isBallOpen={isBallOpen}
 				onClick={() => setIsBallOpen(!isBallOpen)}
+				transparent
 			>
-				<Container>
-					<FluidImg src={pokeTop} height={"10rem"} />
-				</Container>
+				<FluidImage src={pokeTop} height={"10rem"} />
 			</AnimationWrapper>
 			<OpenBall isBallOpen={isBallOpen} />
 			<ShowForm isBallOpen={isBallOpen} />
@@ -65,7 +62,7 @@ const PokeballAnimation = () => {
 	);
 };
 
-const AnimationWrapper = styled.div`
+const AnimationWrapper = styled(Container)`
 	max-height: 8rem;
 	overflow: visible;
 	margin-top: 1rem;
