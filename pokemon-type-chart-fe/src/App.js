@@ -4,12 +4,12 @@ import { Switch, Route } from "react-router-dom";
 import "./App.scss";
 import colors from "./styles/colors";
 import Logo from "./atoms/logo";
-import Container from "./atoms/container";
 import StyledNavLink from "./atoms/navLink";
-import PokeballAnimation from "./molecules/pokeballAnimation";
+// import PokeballAnimation from "./molecules/pokeballAnimation";
 import Text from "./atoms/text";
-import Results from "./Results";
+// import Results from "./Results";
 import Theme from "./styles/Theme";
+import { Container } from "./atoms";
 
 // TODO:
 // onSubmit, hide form and init loading
@@ -23,8 +23,8 @@ const App = () => {
 
 	return (
 		<Theme>
-			<div className="App" style={{ position: "relative", minHeight: "100vh" }}>
-				<Container height={4} backgroundColor={colors.black}>
+			<Container className="App" minHeight={"100vh"}>
+				<Container dark>
 					<StyledNavLink to={"/"} activeClassName="selected">
 						Search
 					</StyledNavLink>
@@ -34,11 +34,10 @@ const App = () => {
 					</StyledNavLink>
 				</Container>
 
-				<PokeballAnimation />
-				<Results />
+				{/* <PokeballAnimation />
+				<Results /> */}
 				<Container
-					id="footer"
-					backgroundColor={colors.black}
+					dark
 					position={"absolute"}
 					bottom={"0"}
 					flexDirection={"column"}
@@ -56,7 +55,7 @@ const App = () => {
 					<Route path="/about" />
 					<Route path="/" />
 				</Switch>
-			</div>
+			</Container>
 		</Theme>
 	);
 };

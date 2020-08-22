@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 import FluidImg from "../atoms/fluidImg";
-import Container from "../atoms/container";
+import Container from "../atoms/oldcontainer";
 // images
 import pokeTop from "../img/pokeballtop.png";
 import pokeBottom from "../img/pokeballbottom.png";

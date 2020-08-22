@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import colors from "./colors";
 
 const theme = {
 	colors: {
@@ -11,6 +12,9 @@ const theme = {
 		green: "#007700",
 		gray: "#747474",
 	},
+
+	dark: colors.black,
+	light: colors.greyWhite
 	// TODO: fonts, fontSizes
 };
 
