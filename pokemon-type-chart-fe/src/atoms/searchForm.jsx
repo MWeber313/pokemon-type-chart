@@ -27,6 +27,7 @@ const SearchForm = (props) => {
 						setSearchInput(searchInput);
 						console.log(JSON.stringify(data));
 						props.history.push("./results");
+						// Need to add ease to loading results
 					})}
 				>
 					<label value="Search Pokedex">Search Pokedex</label>
