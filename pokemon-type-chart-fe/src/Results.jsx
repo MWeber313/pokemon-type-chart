@@ -39,8 +39,6 @@ const Results = () => {
 	);
 };
 
-export default Results;
-
 const ResultsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -64,5 +62,7 @@ const Weak = styled(Details)`
 const Data = styled.div`
 	border: 2px solid ${colors.black};
 	padding: 1rem;
-	border-radius: 0.5rem
+	border-radius: 0.5rem;
 `;
+
+export default Results;

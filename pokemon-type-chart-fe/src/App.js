@@ -19,10 +19,6 @@ const App = () => {
 			<Container className="App" minHeight={"100vh"} width={"100vw"}>
 				<Header />
 				{/* view */}
-
-				<PokeBallAnimation />
-
-				{/* end view */}
 				<Container dark absolute column bottom small>
 					<Text>Pokemon Type Chart, Mack Weber</Text>
 					<Text sm>All Rights Reserved, {year}</Text>
@@ -30,7 +26,7 @@ const App = () => {
 				{/* Routing */}
 				<Switch>
 					<Route path="/about" />
-					<Route path="/" />
+					<Route exact path="/" component={PokeBallAnimation} />
 					<Route path="/results" component={Results} />
 				</Switch>
 			</Container>

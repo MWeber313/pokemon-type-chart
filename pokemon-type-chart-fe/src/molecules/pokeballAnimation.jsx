@@ -69,3 +69,4 @@ const AnimationWrapper = styled(Container)`
 	width: auto;
 `;
 export default PokeballAnimation;
+
