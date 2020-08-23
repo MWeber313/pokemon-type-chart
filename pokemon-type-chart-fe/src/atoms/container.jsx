@@ -24,8 +24,10 @@ const Container = styled.div`
 			: "auto"};
 	margin: ${(props) => props.margin || "0 auto"};
 	position: ${(props) => (props.absolute ? "absolute" : "relative")};
-	bottom: ${(props) => (props.bottom ? 0 : "auto")};
-	top: ${(props) => (props.top ? 0 : "auto")};
+	bottom: ${(props) =>
+		props.bottom ? 0 : props.customBottom ? props.customBottom : "auto"};
+	top: ${(props) =>
+		props.top ? 0 : props.customTop ? props.customTop : "auto"};
 	overflow: ${(props) => (props.hidden ? "hidden" : "auto")};
 `;
 

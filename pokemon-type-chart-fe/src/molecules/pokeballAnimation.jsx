@@ -17,7 +17,7 @@ const PokeballAnimation = () => {
 
 	const ShowForm = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-200rem" : "1rem",
+			marginTop: !isBallOpen ? "-200rem" : "3rem",
 			from: { marginTop: "-100rem" },
 
 			zIndex: isBallOpen ? 999 : 0,
@@ -31,11 +31,11 @@ const PokeballAnimation = () => {
 
 	const OpenBall = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginBottom: !isBallOpen ? "14rem" : "4rem",
-			from: { marginBottom: "14rem" },
+			marginTop: !isBallOpen ? "0.25rem" : "8rem",
+			from: { marginTop: "0.25rem" },
 		});
 		return (
-			<Container id="pokeballBottom" transparent absolute bottom>
+			<Container id="pokeballBottom" transparent absolute customTop={"13rem"}>
 				<animated.div style={props}>
 					<FluidImage src={pokeBottom} height={"8.25rem"} />
 				</animated.div>
