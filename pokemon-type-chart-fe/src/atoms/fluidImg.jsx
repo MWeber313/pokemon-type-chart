@@ -17,6 +17,7 @@ const StyledImg = styled.img`
 	src: ${(props) => props.src || null};
 	alt: ${(props) => props.alt || null};
 	transform: ${(props) => props.transform || null};
+
 `;
 
 export default FluidImg;

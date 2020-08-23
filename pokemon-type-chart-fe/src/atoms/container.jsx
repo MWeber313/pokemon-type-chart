@@ -22,7 +22,7 @@ const Container = styled.div`
 			: props.small
 			? props.theme.small
 			: "auto"};
-	margin: ${(props) => props.margin || "auto"};
+	margin: ${(props) => props.margin || "0 auto"};
 	position: ${(props) => (props.absolute ? "absolute" : "relative")};
 	bottom: ${(props) => (props.bottom ? 0 : "auto")};
 	top: ${(props) => (props.top ? 0 : "auto")};
