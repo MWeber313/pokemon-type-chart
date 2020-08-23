@@ -18,10 +18,8 @@ const PokeballAnimation = () => {
 	const ShowForm = ({ isBallOpen }) => {
 		const props = useSpring({
 			marginTop: !isBallOpen ? "-200rem" : "1rem",
-			from: { marginTop: "-200rem" },
-			display: "flex",
-			justifyContent: "space-around",
-			overflow: "hidden",
+			from: { marginTop: "-100rem" },
+
 			zIndex: isBallOpen ? 999 : 0,
 		});
 		return (
@@ -33,12 +31,11 @@ const PokeballAnimation = () => {
 
 	const OpenBall = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-1rem" : "14rem",
-			from: { marginTop: "-1rem" },
-			zIndex: isBallOpen ? 99 : 0,
+			marginBottom: !isBallOpen ? "14rem" : "4rem",
+			from: { marginBottom: "14rem" },
 		});
 		return (
-			<Container id="pokeballBottom" transparent absolute>
+			<Container id="pokeballBottom" transparent absolute bottom>
 				<animated.div style={props}>
 					<FluidImage src={pokeBottom} height={"8.25rem"} />
 				</animated.div>
@@ -55,6 +52,7 @@ const PokeballAnimation = () => {
 				transparent
 				absolute
 				top
+
 			>
 				<FluidImage src={pokeTop} height={"10rem"} />
 			</AnimationWrapper>
@@ -67,7 +65,7 @@ const PokeballAnimation = () => {
 const AnimationWrapper = styled(Container)`
 	max-height: 8rem;
 	overflow: visible;
-	margin: 7rem auto;
+	margin: 7rem 0 0 0;
 	width: auto;
 `;
 export default PokeballAnimation;
