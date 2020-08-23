@@ -5,6 +5,7 @@ import "./App.scss";
 import Theme from "./styles/Theme";
 import { Container, Text } from "./atoms";
 import { Header, PokeBallAnimation } from "./molecules";
+import Results from "./Results";
 
 // TODO:
 // onSubmit, hide form and init loading
@@ -13,7 +14,6 @@ const App = () => {
 	const today = new Date();
 	const year = today.getFullYear();
 
-	
 	return (
 		<Theme>
 			<Container className="App" minHeight={"100vh"} width={"100vw"}>
@@ -31,6 +31,7 @@ const App = () => {
 				<Switch>
 					<Route path="/about" />
 					<Route path="/" />
+					<Route path="/results" component={Results} />
 				</Switch>
 			</Container>
 		</Theme>

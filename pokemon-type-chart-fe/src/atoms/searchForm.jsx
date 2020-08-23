@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {withRouter} from 'react-router-dom'
 import { useForm } from "react-hook-form";
 
 
@@ -6,7 +7,7 @@ const defaultValues = {
 	Search: "",
 };
 
-const SearchForm = () => {
+const SearchForm = (props) => {
 	const { handleSubmit, register } = useForm({ defaultValues });
 	const [searchInput, setSearchInput] = useState(null);
 
@@ -19,7 +20,8 @@ const SearchForm = () => {
 				style={{ display: "flex", flexDirection: "column", zIndex: "inherit" }}
 				onSubmit={handleSubmit((data) => {
 					setSearchInput(searchInput);
-					alert(JSON.stringify(data));
+					console.log(JSON.stringify(data));
+					props.history.push("./results");
 				})}
 			>
 				<label value="Search Pokedex">Search Pokedex</label>
@@ -31,4 +33,4 @@ const SearchForm = () => {
 	);
 };
 
-export default SearchForm;
+export default withRouter(SearchForm);
