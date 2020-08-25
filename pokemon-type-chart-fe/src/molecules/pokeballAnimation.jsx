@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 // import * as easings from "d3-ease";
 import { FluidImage, Container, SearchForm } from "../atoms";
@@ -12,22 +13,12 @@ const PokeballAnimation = () => {
 		console.log(`Ball open: ${isBallOpen}`);
 	});
 
-	const AnimatedImage = ({ isBallOpen }) => {
-		const props = useSpring({
-			marginTop: !isBallOpen ? 0 : 150,
-			from: { marginTop: 0 },
-		});
-		return (
-			<animated.div style={props}>
-				<FluidImage src={pokeBottom} height={"150px"} />
-			</animated.div>
-		);
-	};
-
 	const AnimatedSearchInput = ({ isBallOpen }) => {
 		const props = useSpring({
-			zIndex: !isBallOpen ? 0 : 9999,
-			from: { zIndex: 0 },
+			display: "flex",
+			height: !isBallOpen ? 0 : 120,
+			zIndex: !isBallOpen ? -99 : 9999,
+			from: { height: 0 },
 		});
 		return (
 			<animated.div style={props}>
@@ -37,22 +28,19 @@ const PokeballAnimation = () => {
 	};
 
 	return (
-		<Container column transparent height={"100vh"}>
-			<Container
-				onClick={() => setIsBallOpen((isBallOpen) => !isBallOpen)}
-				transparent
-				absolute
-				column
-				customTop={"6rem"}
-			>
+		<Container transparent column>
+			<div onClick={() => setIsBallOpen((isBallOpen) => !isBallOpen)}>
 				<FluidImage src={pokeTop} height={"180px"} />
-				<AnimatedSearchInput isBallOpen={isBallOpen} />
-			</Container>
-
-			<Container absolute customTop={"225px"} transparent column>
-				<AnimatedImage isBallOpen={isBallOpen} />
-			</Container>
+			</div>
+			<AnimatedSearchInput isBallOpen={isBallOpen} />
+			<AnimatedImage>
+				<FluidImage src={pokeBottom} height={"150px"} />
+			</AnimatedImage>
 		</Container>
 	);
 };
 export default PokeballAnimation;
+
+const AnimatedImage = styled.div`
+	margin-top: -50px;
+`;
