@@ -3,8 +3,8 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 import Theme from "./styles/Theme";
-import { Container, Text } from "./atoms";
-import { Header, PokeBallAnimation } from "./molecules";
+import { Container } from "./atoms";
+import { Header, Footer, PokeBallAnimation } from "./molecules";
 import Results from "./Results";
 
 // TODO:
@@ -26,11 +26,7 @@ const App = () => {
 					<Route exact path="/" component={PokeBallAnimation} />
 					<Route path="/results" component={Results} />
 				</Switch>
-
-				<Container dark absolute column bottom small>
-					<Text>Pokemon Type Chart, Mack Weber</Text>
-					<Text sm>All Rights Reserved, {year}</Text>
-				</Container>
+				<Footer year={year}/>
 			</Container>
 		</Theme>
 	);
