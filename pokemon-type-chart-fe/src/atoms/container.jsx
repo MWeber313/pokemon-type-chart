@@ -6,10 +6,10 @@ const Container = styled.div`
 	width: ${(props) => props.width || "100%"};
 	background-color: ${(props) =>
 		props.dark
-			? props.theme.dark
+			? props.theme.colors.dark
 			: props.transparent
 			? "transparent"
-			: props.theme.light};
+			: props.theme.colors.light};
 	display: ${(props) => props.display || "flex"};
 	flex-direction: ${(props) => (props.column ? "column" : "auto")};
 	justify-content: ${(props) => props.justifyContent || "center"};

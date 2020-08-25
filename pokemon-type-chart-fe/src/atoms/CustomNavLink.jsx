@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const CustomNavLink = styled(NavLink)`
-	color: ${(props) => (props.color ? props.color : props.theme.light)};
+	color: ${(props) => (props.color ? props.color : props.theme.colors.light)};
 	text-decoration: none;
 	border-bottom: 0.2rem solid;
 	padding-bottom: 0.25rem;
@@ -14,7 +14,7 @@ const CustomNavLink = styled(NavLink)`
 		transform: scale(1.5);
 	}
 	&.selected {
-		border-bottom: ${(props) => props.theme.cta} solid 0.3rem;
+		border-bottom: ${(props) => props.theme.colors.cta} solid 0.3rem;
 	}
 `;
 

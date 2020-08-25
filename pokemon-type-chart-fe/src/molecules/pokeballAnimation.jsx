@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
+// import * as easings from "d3-ease";
 import { FluidImage, Container, SearchForm } from "../atoms";
 // images
 import pokeTop from "../img/pokeballtop.png";
@@ -8,19 +8,26 @@ import pokeBottom from "../img/pokeballbottom.png";
 
 const PokeballAnimation = () => {
 	const [isBallOpen, setIsBallOpen] = useState(false);
-
 	useEffect(() => {
-		// change ball
-		// console.log(`isBallOpen: ${isBallOpen}`);
-		// TODO: need to stop refresh unless ball clicked
+		console.log(`Ball open: ${isBallOpen}`);
 	});
 
-	const ShowForm = ({ isBallOpen }) => {
+	const AnimatedImage = ({ isBallOpen }) => {
 		const props = useSpring({
-			marginTop: !isBallOpen ? "-200rem" : "3rem",
-			from: { marginTop: "-100rem" },
+			marginTop: !isBallOpen ? 0 : 150,
+			from: { marginTop: 0 },
+		});
+		return (
+			<animated.div style={props}>
+				<FluidImage src={pokeBottom} height={"150px"} />
+			</animated.div>
+		);
+	};
 
-			zIndex: isBallOpen ? 999 : 0,
+	const AnimatedSearchInput = ({ isBallOpen }) => {
+		const props = useSpring({
+			zIndex: !isBallOpen ? 0 : 9999,
+			from: { zIndex: 0 },
 		});
 		return (
 			<animated.div style={props}>
@@ -29,44 +36,23 @@ const PokeballAnimation = () => {
 		);
 	};
 
-	const OpenBall = ({ isBallOpen }) => {
-		const props = useSpring({
-			marginTop: !isBallOpen ? "0.25rem" : "8rem",
-			from: { marginTop: "0.25rem" },
-		});
-		return (
-			<Container id="pokeballBottom" transparent absolute customTop={"13rem"}>
-				<animated.div style={props}>
-					<FluidImage src={pokeBottom} height={"8.25rem"} />
-				</animated.div>
-			</Container>
-		);
-	};
-
 	return (
-		<>
-			<AnimationWrapper
-				className={"animationWrapper"}
-				isBallOpen={isBallOpen}
-				onClick={() => setIsBallOpen(!isBallOpen)}
+		<Container column transparent height={"100vh"}>
+			<Container
+				onClick={() => setIsBallOpen((isBallOpen) => !isBallOpen)}
 				transparent
 				absolute
-				top
-
+				column
+				customTop={"6rem"}
 			>
-				<FluidImage src={pokeTop} height={"10rem"} />
-			</AnimationWrapper>
-			<OpenBall isBallOpen={isBallOpen} />
-			<ShowForm isBallOpen={isBallOpen} />
-		</>
+				<FluidImage src={pokeTop} height={"180px"} />
+				<AnimatedSearchInput isBallOpen={isBallOpen} />
+			</Container>
+
+			<Container absolute customTop={"225px"} transparent column>
+				<AnimatedImage isBallOpen={isBallOpen} />
+			</Container>
+		</Container>
 	);
 };
-
-const AnimationWrapper = styled(Container)`
-	max-height: 8rem;
-	overflow: visible;
-	margin: 7rem 0 0 0;
-	width: auto;
-`;
 export default PokeballAnimation;
-

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { lighten } from "polished";
-import colors from "./styles/colors";
 
 const Results = () => {
 	console.log(`Results rendered`);
@@ -51,16 +50,16 @@ const Details = styled.div`
 	padding: 1rem;
 `;
 const Strong = styled(Details)`
-	background-color: ${lighten(0.55, colors.green)};
+	background-color: ${(props) => lighten(0.55, props.theme.colors.green)};
 `;
 const Neutral = styled(Details)`
-	background-color: ${lighten(0.2, colors.gray)};
+	background-color: ${(props) => lighten(0.2, props.theme.colors.gray)};
 `;
 const Weak = styled(Details)`
-	background-color: ${lighten(0.4, colors.red)};
+	background-color: ${(props) => lighten(0.4, props.theme.colors.primary)};
 `;
 const Data = styled.div`
-	border: 2px solid ${colors.black};
+	border: ${(props) => `2px solid ${props.theme.colors.dark}`};
 	padding: 1rem;
 	border-radius: 0.5rem;
 `;

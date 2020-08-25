@@ -12,7 +12,7 @@ const SearchForm = (props) => {
 	const { register, handleSubmit } = methods;
 	const [searchInput, setSearchInput] = useState(null);
 
-	console.log(searchInput === null ? `Waiting for input` : searchInput);
+	// console.log(searchInput === null ? `Waiting for input` : searchInput);
 
 	return (
 		<>

@@ -16,19 +16,21 @@ const App = () => {
 
 	return (
 		<Theme>
-			<Container className="App" minHeight={"100vh"} width={"100vw"}>
+			<Container className="App" minHeight={"100vh"} width={"100vw"} hidden>
 				<Header />
-				{/* view */}
-				<Container dark absolute column bottom small>
-					<Text>Pokemon Type Chart, Mack Weber</Text>
-					<Text sm>All Rights Reserved, {year}</Text>
-				</Container>
-				{/* Routing */}
+
+				{/* View && Routing */}
+
 				<Switch>
 					<Route path="/about" />
 					<Route exact path="/" component={PokeBallAnimation} />
 					<Route path="/results" component={Results} />
 				</Switch>
+
+				<Container dark absolute column bottom small>
+					<Text>Pokemon Type Chart, Mack Weber</Text>
+					<Text sm>All Rights Reserved, {year}</Text>
+				</Container>
 			</Container>
 		</Theme>
 	);

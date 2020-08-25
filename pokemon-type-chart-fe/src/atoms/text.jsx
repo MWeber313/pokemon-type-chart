@@ -3,10 +3,10 @@ import styled from "styled-components";
 const Text = styled.p`
 	color: ${(props) =>
 		props.dark
-			? props.theme.dark
+			? props.theme.colors.dark
 			: props.cta
-			? props.theme.cta
-			: props.theme.light};
+			? props.theme.colors.cta
+			: props.theme.colors.light};
 	font-size: ${(props) =>
 		props.sm
 			? props.theme.font.sm
