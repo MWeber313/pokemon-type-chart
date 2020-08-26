@@ -1,35 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { lighten } from "polished";
+import { SearchContext } from "./SearchContext";
+import { Container } from "./atoms";
 
-const Results = () => {
-	console.log(`Results rendered`);
+const Results = (props) => {
+	const userInput = useContext(SearchContext);
+	const searchedTerm = userInput.searchInput["search"];
 
 	return (
 		<>
-			<ResultsWrapper>
+			<ResultsWrapper column>
 				<Details>
-					<p>[searched Pokemon] Details:</p>
+					<p>{searchedTerm} Details:</p>
 					<Data>data</Data>
 				</Details>
 				<Strong>
 					{" "}
 					<p>
-						[searched Pokemon] <br /> Strong against:
+						{searchedTerm} <br /> Strong against:
 					</p>
 					<Data>data</Data>
 				</Strong>
 				<Neutral>
 					{" "}
 					<p>
-						[searched Pokemon] <br /> Neutral against:
+						{searchedTerm} <br /> Neutral against:
 					</p>
 					<Data>data</Data>
 				</Neutral>
 				<Weak>
 					{" "}
 					<p>
-						[searched Pokemon] <br /> Weak against:
+						{searchedTerm} <br /> Weak against:
 					</p>
 					<Data>data</Data>
 				</Weak>
@@ -38,11 +41,8 @@ const Results = () => {
 	);
 };
 
-const ResultsWrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	min-height: 80vh;
-	margin: 0.5rem 1rem;
+const ResultsWrapper = styled(Container)`
+	margin-top: 5rem;
 `;
 const Details = styled.div`
 	box-shadow: 10px 5px 5px gray;

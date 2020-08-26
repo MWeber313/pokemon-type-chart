@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { withRouter } from "react-router-dom";
-// import { useForm } from "react-hook-form";
-import { useForm, FormProvider } from "react-hook-form"; // useFormContext
+import { useForm, FormProvider } from "react-hook-form";
 
-const defaultValues = {
-	Search: "",
-};
+import { SearchContext } from "../SearchContext";
 
 const SearchForm = (props) => {
-	const methods = useForm({ defaultValues });
-	const { register, handleSubmit } = methods;
-	const [searchInput, setSearchInput] = useState(null);
+	const methods = useForm(); //{ defaultValues }
+	const userInput = useContext(SearchContext);
 
-	// console.log(searchInput === null ? `Waiting for input` : searchInput);
+	const onSubmit = (data) => {
+		userInput.setSearchInput(data);
+		props.history.push("./results");
+	};
+
+	useEffect(() => {
+		console.log(!userInput.searchInput ? `Waiting for input` : userInput.searchInput);
+	}, [userInput.searchInput]);
 
 	return (
 		<>
@@ -23,15 +26,10 @@ const SearchForm = (props) => {
 						flexDirection: "column",
 						zIndex: "inherit",
 					}}
-					onSubmit={handleSubmit((data) => {
-						setSearchInput(searchInput);
-						console.log(JSON.stringify(data));
-						props.history.push("./results");
-						// Need to add ease to loading results
-					})}
+					onSubmit={methods.handleSubmit(onSubmit)}
 				>
 					<label value="Search Pokedex">Search Pokedex</label>
-					<input autoFocus type="text" name="Search" ref={register} />
+					<input autoFocus type="text" name="search" ref={methods.register} />
 					{/* add onClick reset(defaultValues)? */}
 					<input type="submit" value="submit" />
 				</form>
@@ -41,5 +39,3 @@ const SearchForm = (props) => {
 };
 
 export default withRouter(SearchForm);
-
-
