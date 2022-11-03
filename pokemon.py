@@ -1,4 +1,3 @@
-from contextlib import nullcontext
 import requests
 
 cache = dict()
@@ -7,23 +6,25 @@ pokeTYPE = None
 class Pokemon():
     def __init__(self) -> None:
         super().__init__()
-        self.cache = dict()
+        self.cache = list()
         self.pokeTYPE = None
         
     def show_cache(self):
         cache = self.cache
+        print(self.cache)
         for i in cache:
-            print(i)
+            print(f"This is i: {i}")
         
         return 
     def set_type(self, type):
-        pokeTYPE = type
-        print(pokeTYPE)
+        print(f"Current poketype: {self.pokeTYPE}")
+        self.pokeTYPE = type
 
-        return pokeTYPE
+        return 
 
-    def get_article_from_server(self, url):
-        self.cache.update({pokeTYPE:url})
+    def cache_type_data(self, url):
+        cache = self.cache
+        cache.append({url:"Data of Pokemon Type"})
         return 
         # response = requests.get(url)
         # return response.text
@@ -33,10 +34,14 @@ class Pokemon():
         return
 
 
-print("Select Pokemon Type")
-pokeType = input()
 # pokeURL = f"https://pokeapi.co/api/v2/type/{pokeType}"
 programInstance = Pokemon()
-programInstance.set_type(pokeType)
-programInstance.get_article_from_server(pokeTYPE)
-programInstance.show_cache()
+while True:
+    try:
+        programInstance.show_cache()
+        print("Select Pokemon Type")
+        pokeTypeInput = input()
+        programInstance.set_type(pokeTypeInput)
+        programInstance.cache_type_data(pokeTypeInput)
+    except KeyboardInterrupt:
+        exit()
