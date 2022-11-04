@@ -112,24 +112,29 @@ class Pokemon():
         # return response.text
 
     def get_article(self):
-        if self.pokeTYPE == None:
-            self.pokeTYPE = input()
-            self.cache.append[{self.pokeTYPE: response["damage_relations"]}]
-        else:
-            self.cache.append[{self.pokeTYPE: response["damage_relations"]}]
-        return
+					if self.pokeTYPE == None:	
+						print("Do this")
+						self.pokeTYPE = input()
+						self.cache.append({self.pokeTYPE: response})
+					else:
+						self.cache.append({self.pokeTYPE: response})
+					
+					return
 
 
 # pokeURL = f"https://pokeapi.co/api/v2/type/{pokeType}"
 programInstance = Pokemon()
-while True:
-    try:
-        programInstance.get_article()
-        programInstance.show_cache()
-        # programInstance.show_cache()
-        # print("Select Pokemon Type")
-        # pokeTypeInput = input()
-        # programInstance.set_type(pokeTypeInput)
-        # programInstance.cache_type_data(pokeTypeInput)
-    except KeyboardInterrupt:
-        exit()
+programInstance.get_article()
+programInstance.show_cache()
+# while True:
+#     # try:
+#     #     programInstance.get_article()
+#     #     programInstance.show_cache()
+		
+#     #     # programInstance.show_cache()
+#     #     # print("Select Pokemon Type")
+#     #     # pokeTypeInput = input()
+#     #     # programInstance.set_type(pokeTypeInput)
+#     #     # programInstance.cache_type_data(pokeTypeInput)
+#     # except KeyboardInterrupt:
+#     #     exit()
