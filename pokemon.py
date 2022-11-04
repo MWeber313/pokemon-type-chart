@@ -3,6 +3,88 @@ import requests
 cache = dict()
 pokeTYPE = None 
 
+
+response = {"damage_relations": {
+		"double_damage_from": [
+			{
+				"name": "flying",
+				"url": "https://pokeapi.co/api/v2/type/3/"
+			},
+			{
+				"name": "psychic",
+				"url": "https://pokeapi.co/api/v2/type/14/"
+			},
+			{
+				"name": "fairy",
+				"url": "https://pokeapi.co/api/v2/type/18/"
+			}
+		],
+		"double_damage_to": [
+			{
+				"name": "normal",
+				"url": "https://pokeapi.co/api/v2/type/1/"
+			},
+			{
+				"name": "rock",
+				"url": "https://pokeapi.co/api/v2/type/6/"
+			},
+			{
+				"name": "steel",
+				"url": "https://pokeapi.co/api/v2/type/9/"
+			},
+			{
+				"name": "ice",
+				"url": "https://pokeapi.co/api/v2/type/15/"
+			},
+			{
+				"name": "dark",
+				"url": "https://pokeapi.co/api/v2/type/17/"
+			}
+		],
+		"half_damage_from": [
+			{
+				"name": "rock",
+				"url": "https://pokeapi.co/api/v2/type/6/"
+			},
+			{
+				"name": "bug",
+				"url": "https://pokeapi.co/api/v2/type/7/"
+			},
+			{
+				"name": "dark",
+				"url": "https://pokeapi.co/api/v2/type/17/"
+			}
+		],
+		"half_damage_to": [
+			{
+				"name": "flying",
+				"url": "https://pokeapi.co/api/v2/type/3/"
+			},
+			{
+				"name": "poison",
+				"url": "https://pokeapi.co/api/v2/type/4/"
+			},
+			{
+				"name": "bug",
+				"url": "https://pokeapi.co/api/v2/type/7/"
+			},
+			{
+				"name": "psychic",
+				"url": "https://pokeapi.co/api/v2/type/14/"
+			},
+			{
+				"name": "fairy",
+				"url": "https://pokeapi.co/api/v2/type/18/"
+			}
+		],
+		"no_damage_from": [],
+		"no_damage_to": [
+			{
+				"name": "ghost",
+				"url": "https://pokeapi.co/api/v2/type/8/"
+			}
+		]
+	},}
 class Pokemon():
     def __init__(self) -> None:
         super().__init__()
@@ -24,13 +106,17 @@ class Pokemon():
 
     def cache_type_data(self, url):
         cache = self.cache
-        cache.append({url:"Data of Pokemon Type"})
+        cache.append({url:{f"Object {self.pokeTYPE}": "Object Data of Pokemon Type"}})
         return 
         # response = requests.get(url)
         # return response.text
 
-    def get_article(self, url):
-
+    def get_article(self):
+        if self.pokeTYPE == None:
+            self.pokeTYPE = input()
+            self.cache.append[{self.pokeTYPE: response["damage_relations"]}]
+        else:
+            self.cache.append[{self.pokeTYPE: response["damage_relations"]}]
         return
 
 
@@ -38,10 +124,12 @@ class Pokemon():
 programInstance = Pokemon()
 while True:
     try:
+        programInstance.get_article()
         programInstance.show_cache()
-        print("Select Pokemon Type")
-        pokeTypeInput = input()
-        programInstance.set_type(pokeTypeInput)
-        programInstance.cache_type_data(pokeTypeInput)
+        # programInstance.show_cache()
+        # print("Select Pokemon Type")
+        # pokeTypeInput = input()
+        # programInstance.set_type(pokeTypeInput)
+        # programInstance.cache_type_data(pokeTypeInput)
     except KeyboardInterrupt:
         exit()
