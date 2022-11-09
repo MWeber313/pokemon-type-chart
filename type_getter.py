@@ -13,7 +13,7 @@ class Pokemon:
     def get_damage_data(self):
         if self.damageType not in self.cache: 
             response = requests.get(f"https://pokeapi.co/api/v2/type/{self.damageType}")
-            self.cache.append({self.damageType:response.text})
+            self.cache.append({self.damageType:response.json()})
             self.show_damage_data()
         else:
             self.show_damage_data()
@@ -24,7 +24,7 @@ class Pokemon:
         print(f"This is the cache: {self.cache}")
         print("This is every item in the cache")
         for i in self.cache:
-            print(i)
+            print(i["damage_relations"])
         return
     
 programInstance = Pokemon()
