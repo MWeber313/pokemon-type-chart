@@ -4,6 +4,18 @@ class Pokemon:
     def __init__(self):
         self.cache = list()
         self.damageType = None
+        self.commands = {
+            'a': self.set_damage_type(),
+            'b': self.get_damage_data(),
+            'c': self.show_damage_data(),
+            'q': quit()
+            }
+    
+    def input_command(self):
+        print("Please type a command")
+        command = input()
+        self.commands[command]
+        return
     
     def set_damage_type(self):
         newType = input("Please input the id # of the damage type: ")
@@ -37,3 +49,5 @@ programInstance.show_damage_data()
 # this should NOT append a new item to the cache
 programInstance.set_damage_type()
 programInstance.get_damage_data()
+
+while True:
