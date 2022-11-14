@@ -86,9 +86,8 @@ pokeTYPE = None
 # 		]
 # 	},}
 class Pokemon():
-    def __init__(self) -> None:
-        super().__init__()
-        self.cache = list()
+    def __init__(self):
+        self.cache = dict()
         self.pokeTYPE = None
         
     def show_cache(self):
@@ -121,9 +120,9 @@ class Pokemon():
 
 
 # pokeURL = f"https://pokeapi.co/api/v2/type/{pokeType}"
-programInstance = Pokemon()
-programInstance.get_article()
-programInstance.show_cache()
+# programInstance = Pokemon()
+# programInstance.get_article()
+# programInstance.show_cache()
 # while True:
 #     # try:
 #     #     programInstance.get_article()

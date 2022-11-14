@@ -1,9 +1,11 @@
-import requests 
+import requests
+from pokemon import Pokemon
 
-class Pokemon:
+class TypeGetter(Pokemon):
     def __init__(self):
-        self.cache = dict()
+        super().__init__()
         self.damageType = None
+        # self.cache = dict()
         # self.commands = {
         #     "a": self.set_damage_type(),
         #     "b": self.get_damage_data(),
@@ -25,10 +27,11 @@ class Pokemon:
     
     def set_damage_type(self):
         newType = input("Please input the id # of the damage type: ")
-        if int(newType) == int:
-            self.damageType = int(newType)
+        if int(newType) == ValueError:
+            print("Please input a number")
+            self.set_damage_type()
         else:
-            self.damageType = newType
+            self.damageType = int(newType)
         return
 
     def get_damage_data(self):
@@ -59,9 +62,10 @@ class Pokemon:
         return
     
 running = True
-programInstance = Pokemon()
+programInstance = TypeGetter()
 
 programInstance.get_damage_data()
+programInstance.show_cache()
 
 # while running:
 #     programInstance.input_command()
