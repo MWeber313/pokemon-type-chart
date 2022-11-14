@@ -2,7 +2,7 @@ import requests
 
 class Pokemon:
     def __init__(self):
-        self.cache = list()
+        self.cache = dict()
         self.damageType = None
         # self.commands = {
         #     "a": self.set_damage_type(),
@@ -25,18 +25,20 @@ class Pokemon:
     
     def set_damage_type(self):
         newType = input("Please input the id # of the damage type: ")
-        self.damageType = newType
+        if int(newType) == int:
+            self.damageType = int(newType)
+        else:
+            self.damageType = newType
         return
 
     def get_damage_data(self):
         if self.damageType == None: 
             self.set_damage_type()
             response = requests.get(f"https://pokeapi.co/api/v2/type/{self.damageType}")
-            self.cache.append({self.damageType:response.json()})
+            self.cache[self.damageType] = response.json()
             self.show_damage_data()
         else:
             self.show_damage_data()
-            print(len(self.cache))
         return
     
     def show_damage_data(self):
@@ -45,21 +47,8 @@ class Pokemon:
         # print(type(damage_data))
         # print(damage_data.items())
         
-        
 
-        #  for i in self.cache:
-        #     print("Type of i ", type(i))
-        #     print("Keys of i ", i.keys())
-        #     print("Items of i ", i.items())
-        #     # i is a dict()
-        #     for j in i:
-        #         # but j is a string?
-        #         print("Type of j ", type(j))
-        #         print(j)
-        #         print("Type of i at key j ", type(i[j]))
-        #         for k in i[j]:
-        #             print("Type of k ", type(k))
-        #             print(k)
+        print(self.cache[self.damageType]["damage_relations"])
 
                 
     
