@@ -4,12 +4,12 @@ class Pokemon:
     def __init__(self):
         self.cache = list()
         self.damageType = None
-        self.commands = {
-            'a': self.set_damage_type(),
-            'b': self.get_damage_data(),
-            'c': self.show_damage_data(),
-            'q': quit()
-            }
+        # self.commands = {
+        #     'a': self.set_damage_type(),
+        #     'b': self.get_damage_data(),
+        #     'c': self.show_damage_data(),
+        #     'q': quit()
+        #     },
     
     def input_command(self):
         print("Please type a command")
@@ -36,18 +36,23 @@ class Pokemon:
         print(f"This is the cache: {self.cache}")
         print("This is every item in the cache")
         for i in self.cache:
-            print(i["damage_relations"])
+            print(f"This is i: {i}")
         return
     
+running = True
 programInstance = Pokemon()
-programInstance.set_damage_type()
-programInstance.get_damage_data()
-programInstance.show_damage_data()
-programInstance.set_damage_type()
-programInstance.get_damage_data()
-programInstance.show_damage_data()
-# this should NOT append a new item to the cache
-programInstance.set_damage_type()
-programInstance.get_damage_data()
 
-while True:
+# while running:
+#     programInstance.input_command()
+
+# programInstance.set_damage_type()
+# programInstance.get_damage_data()
+# programInstance.show_damage_data()
+# programInstance.set_damage_type()
+# programInstance.get_damage_data()
+# programInstance.show_damage_data()
+# # this should NOT append a new item to the cache
+# programInstance.set_damage_type()
+# programInstance.get_damage_data()
+
+
