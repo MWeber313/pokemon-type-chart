@@ -40,10 +40,27 @@ class Pokemon:
         return
     
     def show_damage_data(self):
-        for i in self.cache:
-            print(type(i))
-            for j in i:
-                print(j.keys())
+        # damage_data = self.cache[0]
+
+        # print(type(damage_data))
+        # print(damage_data.items())
+        
+        
+
+        #  for i in self.cache:
+        #     print("Type of i ", type(i))
+        #     print("Keys of i ", i.keys())
+        #     print("Items of i ", i.items())
+        #     # i is a dict()
+        #     for j in i:
+        #         # but j is a string?
+        #         print("Type of j ", type(j))
+        #         print(j)
+        #         print("Type of i at key j ", type(i[j]))
+        #         for k in i[j]:
+        #             print("Type of k ", type(k))
+        #             print(k)
+
                 
     
         # print(f"This is the cache: {self.cache}")
