@@ -88,7 +88,8 @@ pokeTYPE = None
 class Pokemon():
     def __init__(self):
         self.cache = dict()
-        self.pokeTYPE = None
+        self.baseLink = "https://pokeapi.co/api/v2/"
+        self.linkCat = str()
         
     def show_cache(self):
         cache = self.cache
@@ -97,10 +98,9 @@ class Pokemon():
             print(f"This is i: {i}")
         
         return 
-    def set_type(self, type):
-        print(f"Current poketype: {self.pokeTYPE}")
-        self.pokeTYPE = type
-
+    def set_link_category(self, category):
+        self.baseLink = f"https://pokeapi.co/api/v2/{category}"
+        
         return 
 
     def cache_type_data(self, url):
