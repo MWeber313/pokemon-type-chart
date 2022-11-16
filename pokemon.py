@@ -98,9 +98,9 @@ class Pokemon():
             print(f"This is i: {i}")
         
         return 
-    def set_link_category(self, category):
-        self.baseLink = f"https://pokeapi.co/api/v2/{category}"
-        
+    def set_link_category(self):
+        self.linkCat = input("Please submit your category: ")
+        self.baseLink = f"https://pokeapi.co/api/v2/{self.linkCat}/"
         return 
 
     def cache_type_data(self, url):
