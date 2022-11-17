@@ -1,90 +1,3 @@
-import requests
-
-cache = dict()
-pokeTYPE = None 
-
-
-# response = {"damage_relations": {
-# 		"double_damage_from": [
-# 			{
-# 				"name": "flying",
-# 				"url": "https://pokeapi.co/api/v2/type/3/"
-# 			},
-# 			{
-# 				"name": "psychic",
-# 				"url": "https://pokeapi.co/api/v2/type/14/"
-# 			},
-# 			{
-# 				"name": "fairy",
-# 				"url": "https://pokeapi.co/api/v2/type/18/"
-# 			}
-# 		],
-# 		"double_damage_to": [
-# 			{
-# 				"name": "normal",
-# 				"url": "https://pokeapi.co/api/v2/type/1/"
-# 			},
-# 			{
-# 				"name": "rock",
-# 				"url": "https://pokeapi.co/api/v2/type/6/"
-# 			},
-# 			{
-# 				"name": "steel",
-# 				"url": "https://pokeapi.co/api/v2/type/9/"
-# 			},
-# 			{
-# 				"name": "ice",
-# 				"url": "https://pokeapi.co/api/v2/type/15/"
-# 			},
-# 			{
-# 				"name": "dark",
-# 				"url": "https://pokeapi.co/api/v2/type/17/"
-# 			}
-# 		],
-# 		"half_damage_from": [
-# 			{
-# 				"name": "rock",
-# 				"url": "https://pokeapi.co/api/v2/type/6/"
-# 			},
-# 			{
-# 				"name": "bug",
-# 				"url": "https://pokeapi.co/api/v2/type/7/"
-# 			},
-# 			{
-# 				"name": "dark",
-# 				"url": "https://pokeapi.co/api/v2/type/17/"
-# 			}
-# 		],
-# 		"half_damage_to": [
-# 			{
-# 				"name": "flying",
-# 				"url": "https://pokeapi.co/api/v2/type/3/"
-# 			},
-# 			{
-# 				"name": "poison",
-# 				"url": "https://pokeapi.co/api/v2/type/4/"
-# 			},
-# 			{
-# 				"name": "bug",
-# 				"url": "https://pokeapi.co/api/v2/type/7/"
-# 			},
-# 			{
-# 				"name": "psychic",
-# 				"url": "https://pokeapi.co/api/v2/type/14/"
-# 			},
-# 			{
-# 				"name": "fairy",
-# 				"url": "https://pokeapi.co/api/v2/type/18/"
-# 			}
-# 		],
-# 		"no_damage_from": [],
-# 		"no_damage_to": [
-# 			{
-# 				"name": "ghost",
-# 				"url": "https://pokeapi.co/api/v2/type/8/"
-# 			}
-# 		]
-# 	},}
 class Pokemon():
     def __init__(self):
         self.cache = dict()
@@ -99,43 +12,14 @@ class Pokemon():
         
         return 
     def set_link_category(self):
+        print(f"Current Link: {self.baseLink}")
         self.linkCat = input("Please submit your category: ")
         print(f'You entered: {self.linkCat}')
         self.baseLink = f"https://pokeapi.co/api/v2/{self.linkCat}/"
-        print(self.baseLink)
+        print(f"Updated Link: {self.baseLink}")
         return 
 
-    def cache_type_data(self, url):
-        cache = self.cache
-        cache.append({url:{f"Object {self.pokeTYPE}": "Object Data of Pokemon Type"}})
-        return 
-
-shankProof = Pokemon()
-shankProof.set_link_category()
-    # def get_article(self):
-	# 				if self.pokeTYPE == None:	
-	# 					print("Do this")
-	# 					self.pokeTYPE = input()
-	# 					self.cache.append({self.pokeTYPE: response})
-	# 				else:
-	# 					self.cache.append({self.pokeTYPE: response})
-					
-	# 				return
-
-
-# pokeURL = f"https://pokeapi.co/api/v2/type/{pokeType}"
-# programInstance = Pokemon()
-# programInstance.get_article()
-# programInstance.show_cache()
-# while True:
-#     # try:
-#     #     programInstance.get_article()
-#     #     programInstance.show_cache()
-		
-#     #     # programInstance.show_cache()
-#     #     # print("Select Pokemon Type")
-#     #     # pokeTypeInput = input()
-#     #     # programInstance.set_type(pokeTypeInput)
-#     #     # programInstance.cache_type_data(pokeTypeInput)
-#     # except KeyboardInterrupt:
-#     #     exit()
+# If you make an instance of the pokemon class in THIS file, it will not carry data over to another file
+# Don't do this \/
+# shankProof = Pokemon()
+# shankProof.set_link_category()
