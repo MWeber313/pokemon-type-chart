@@ -37,7 +37,8 @@ class TypeGetter(Pokemon):
     def get_damage_data(self):
         if self.damageType == None: 
             self.set_damage_type()
-            response = requests.get(f"https://pokeapi.co/api/v2/type/{self.damageType}")
+            # response = requests.get(f"https://pokeapi.co/api/v2/{self.linkCat}/{self.damageType}")
+            response = requests.get("https://pokeapi.co/api/v2/type/1")
             self.cache[self.damageType] = response.json()
             self.show_damage_data()
         else:
@@ -61,7 +62,7 @@ class TypeGetter(Pokemon):
         #     print(f"This is i: {i}")
         return
     
-running = True
+
 programInstance = TypeGetter()
 
 programInstance.get_damage_data()

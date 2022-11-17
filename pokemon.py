@@ -100,7 +100,9 @@ class Pokemon():
         return 
     def set_link_category(self):
         self.linkCat = input("Please submit your category: ")
+        print(f'You entered: {self.linkCat}')
         self.baseLink = f"https://pokeapi.co/api/v2/{self.linkCat}/"
+        print(self.baseLink)
         return 
 
     def cache_type_data(self, url):
@@ -108,6 +110,8 @@ class Pokemon():
         cache.append({url:{f"Object {self.pokeTYPE}": "Object Data of Pokemon Type"}})
         return 
 
+shankProof = Pokemon()
+shankProof.set_link_category()
     # def get_article(self):
 	# 				if self.pokeTYPE == None:	
 	# 					print("Do this")
